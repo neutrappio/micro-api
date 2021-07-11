@@ -1,0 +1,25 @@
+{
+  "name": "neutrapp-com/micro-api",
+  "description": "⚡ Micro API using Phalcon Framework",
+  "type": "project",
+  "license": "MIT",
+  "authors": [{
+    "name": "Yassine",
+    "email": "yassine@rais.me",
+    "homepage": "https://rais.me"
+  }],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Dmapp\\": "./app"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "./tests"
+    }
+  },
+  "config": {
+    "process-timeout": 0
+  }
+}

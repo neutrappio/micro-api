@@ -1,0 +1,28 @@
+# For local development only.
+
+version: '3'
+
+services:
+  mapi-php:
+    container_name: service_php
+    hostname: mapi.local
+    image: mileschou/phalcon:7.4
+    working_dir: /app
+    volumes:
+      - .:/app
+
+  postgres:
+    container_name: service_postgres
+    image: postgres:12-alpine   
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_USER=mapi
+      - POSTGRES_DB=mapi
+
+  redis:
+    container_name: service_redis
+    image: redis:5-alpine
+    ports:
+      - 6379:6379
