@@ -45,7 +45,7 @@ class Application implements IApplication
      * @var array
      */
     private array $handlers = [];
-    
+
     /**
      * App Constructor
      */
