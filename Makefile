@@ -16,6 +16,8 @@ dclean: ## dclean : Docker drop all volumes system files
 	@docker system prune -af
 	@docker volume prune -f
 
+composer:
+	@docker-compose exec mapi_service_php composer install
 
 dlogs: ## dlog : Api Logs
 	@docker-compose logs --follow --tail 30 mapi_service_php
