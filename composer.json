@@ -12,7 +12,8 @@
   ],
   "require": {
     "ext-phalcon": "^4.0",
-    "josegonzalez/dotenv": "dev-master"
+    "josegonzalez/dotenv": "dev-master",
+    "lcobucci/jwt": "^4.1"
   },
   "autoload": {
     "psr-4": {

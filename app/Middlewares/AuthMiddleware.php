@@ -13,8 +13,9 @@ use Lcobucci\JWT\Validation\Constraint\PermittedFor;
 use Lcobucci\JWT\Validation\Constraint\SignedWith;
 
 use Mapi\Models\User;
-use Mapi\Exceptions\PublicException;
 use Mapi\Libraries\Http\HttpCodes;
+use Mapi\Exceptions\PublicException;
+use Mapi\Middlewares\BaseMiddleware;
 
 class AuthMiddleware extends BaseMiddleware
 {
