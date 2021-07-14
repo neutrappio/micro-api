@@ -1,28 +1,100 @@
 # For local development only.
-
-version: '3'
+version: "3"
 
 services:
-  mapi-php:
-    container_name: service_php
+  service_nginx:
+    image: nginx:alpine
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./:/app
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+      - ./docker/nginx/fastcgi.conf:/etc/nginx/fastcgi.conf
+      - ./docker/nginx/fastcgi-php.conf:/etc/nginx/fastcgi-php.conf
+    depends_on:
+      - mapi_service_php
     hostname: mapi.local
-    image: mileschou/phalcon:7.4
+    networks:
+      mapi_network:
+        aliases:
+          - mapi.local
+          - db.mapi.local
+          - cdn.mapi.local
+          - api.mapi.local
+          - redis.mapi.local
+          - adminer.mapi.local
+
+  mapi_service_php:
+    build:
+      context: ./docker/php
     working_dir: /app
+    restart: always
+    ports:
+      - "9990:9990"
+    volumes:
+      - ./:/app
+    depends_on:
+      - mapi_service_minio
+      - mapi_composer
+    networks:
+      - mapi_network
+    hostname: api.mapi.local
+
+  mapi_composer:
+    image: composer
     volumes:
       - .:/app
+    command: install
 
-  postgres:
-    container_name: service_postgres
-    image: postgres:12-alpine   
+  mapi_adminer:
+    image: adminer
+    hostname: adminer.mapi.local
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - mapi_network
+
+  mapi_service_pg:
+    image: postgres:12-alpine
+    hostname: db.mapi.local
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_PASSWORD=secret
-      - POSTGRES_USER=mapi
       - POSTGRES_DB=mapi
+      - POSTGRES_USER=mapi
+      - POSTGRES_PASSWORD=mapi
+    networks:
+      - mapi_network
+    volumes:
+      - mapi_pg_data:/var/lib/postgresql/data/:rw
 
-  redis:
-    container_name: service_redis
+  mapi_service_redis:
     image: redis:5-alpine
+    hostname: redis.mapi.local
     ports:
       - 6379:6379
+    networks:
+      - mapi_network
+
+  mapi_service_minio:
+    image: minio/minio:RELEASE.2021-03-17T02-33-02Z
+    hostname: cdn.mapi.local
+    ports:
+      - "9000:9000"
+    volumes:
+      - mapi_minio_data:/data
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: minio123
+    command: server /data
+    networks:
+      - mapi_network
+
+volumes:
+  mapi_pg_data:
+  mapi_minio_data:
+
+networks:
+  mapi_network:
