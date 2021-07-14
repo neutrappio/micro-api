@@ -3,15 +3,20 @@
   "description": "⚡ Micro API using Phalcon Framework",
   "type": "project",
   "license": "MIT",
-  "authors": [{
-    "name": "Yassine",
-    "email": "yassine@rais.me",
-    "homepage": "https://rais.me"
-  }],
-  "require": {},
+  "authors": [
+    {
+      "name": "Yassine",
+      "email": "yassine@rais.me",
+      "homepage": "https://rais.me"
+    }
+  ],
+  "require": {
+    "ext-phalcon": "^4.0",
+    "josegonzalez/dotenv": "dev-master"
+  },
   "autoload": {
     "psr-4": {
-      "Dmapp\\": "./app"
+      "Mapi\\": "./app"
     }
   },
   "autoload-dev": {
@@ -21,5 +26,8 @@
   },
   "config": {
     "process-timeout": 0
+  },
+  "require-dev": {
+    "phalcon/ide-stubs": "^4.1"
   }
 }
