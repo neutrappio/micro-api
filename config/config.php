@@ -88,8 +88,8 @@ $config =  new Config([
         'password'=> getenv('MAILER_PASSWORD') ?? null,
         'views' => BASE_PATH . '/resources/mails/',
         'from' => [
-            'name'=> getenv('MAILER_FROM_NAME') ?? 'DMApp',
-            'email'=> getenv('MAILER_FROM_EMAIL') ?? 'no-reply@dmapp.io',
+            'name'=> getenv('MAILER_FROM_NAME') ?? 'Mapi',
+            'email'=> getenv('MAILER_FROM_EMAIL') ?? 'no-reply@neutrapp.io',
         ],
     ]
 ]);

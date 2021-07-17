@@ -10,6 +10,5 @@ $collection->setHandler(ProfileController::class, true);
 $collection->setPrefix('/user/profile');
 
 $collection->get('/', 'index');
-$collection->get('/all', 'all');
 
 return $collection;

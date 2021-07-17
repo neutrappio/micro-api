@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace Mapi\Controllers\User;
 
-use Mapi\Core\Controller;
 use Mapi\Models\User;
+use Mapi\Controllers\Auth\LoggedController;
 
 /**
  *  Landing Index Controller
  */
-class ProfileController extends Controller
+class ProfileController extends LoggedController
 {
     /**
      * Index Action
@@ -19,19 +19,7 @@ class ProfileController extends Controller
     public function index() : array
     {
         return [
-            'user'=> User::findFirst()
-        ];
-    }
-
-    /**
-     * All users
-     *
-     * @return array
-     */
-    public function all() : array
-    {
-        return [
-            'data'=> User::find(['limit'=> 10])
+            'user'=> $this->getUser()
         ];
     }
 }
