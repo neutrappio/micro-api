@@ -48,6 +48,7 @@ class Controller extends PController implements ISharedConst
         $routes = array_map(function ($item) {
             $route = $item->getPattern();
             $routeParts = explode('/', $route) ?? [];
+
             foreach ($routeParts as $i => $v) {
                 if (strpos(strval($v), ':') !== false && strpos(strval($v), '{') !== false) {
                     $partArray = explode('{', explode(':', $v)[0])[1];

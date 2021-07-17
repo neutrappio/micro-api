@@ -22,7 +22,6 @@ trait TUser
             'email',
             new EmailValidator(
                 [
-                    'model'   => $this,
                     'message' => 'Please enter a correct email address',
                 ]
             )

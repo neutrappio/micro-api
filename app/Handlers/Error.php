@@ -53,10 +53,13 @@ class Error implements IHandler
                 /**
                  * Dynamic response messages
                  */
-                $statusCode = $app->response->getStatusCode() ?: $codeError;
+                $statusCode = HttpCodes::parseCode($app->response->getStatusCode() ?: $codeError);
+                $statusMessage = HttpCodes::getMessageByCode($statusCode);
+
+
                 $app->response->setStatusCode(
-                    HttpCodes::parseCode($statusCode),
-                    HttpCodes::getMessageByCode($statusCode)
+                    $statusCode,
+                    $statusMessage
                 );
     
                 $app->response->send();

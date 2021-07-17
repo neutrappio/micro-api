@@ -3,14 +3,14 @@ declare(strict_types=1);
 
 namespace Mapi\Libraries\Http;
 
-
 /**
- * Class HttpCodes : 
+ * Class HttpCodes :
  *  Http Library
  *  Http Codes
  *  Code Messages
  */
-class HttpCodes {
+class HttpCodes
+{
 
     // [Informational 1xx]
     const HTTP_CONTINUE                        = 100;
@@ -121,7 +121,7 @@ class HttpCodes {
 
     /**
      * Response can have body
-     * 
+     *
      * @param int $code
      * @return bool
      */
@@ -146,12 +146,12 @@ class HttpCodes {
     {
         $code = intval($code);
 
-        return isset(self::HTTP_MESSAGES[$code]) ? $code : -1;
+        return isset(self::HTTP_MESSAGES[$code]) ? $code : self::HTTP_INTERNAL_SERVER_ERROR;
     }
 
     /**
      * Get Message By Code
-     * 
+     *
      * @param mixed $code
      * @return string
      */
@@ -159,5 +159,4 @@ class HttpCodes {
     {
         return self::HTTP_MESSAGES[$code] ?? null;
     }
-
 }

@@ -3,9 +3,11 @@
 namespace Mapi\Models;
 
 use Mapi\Core\Model;
+use Mapi\Traits\TUser;
 
 class User extends Model
 {
+    use TUser;
 
     /**
      *

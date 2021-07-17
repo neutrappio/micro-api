@@ -26,4 +26,5 @@ try {
 } catch (\Exception $e) {
     // Logger
     echo "Error : ", $e->getMessage();
+    print_r($e->getTrace());
 }

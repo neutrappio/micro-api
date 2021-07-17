@@ -7,6 +7,7 @@ use Mapi\Controllers\IndexController;
 $collection = new Collection();
 $collection->setHandler(IndexController::class, true);
 
-$collection->get('/', 'index');
+// 'public' (avoid auth middleware)
+$collection->get('/', 'index', 'public');
 
 return $collection;
