@@ -165,7 +165,7 @@ abstract class Model extends PModel implements ISharedConst
      */
     public function getIp() : string
     {
-        return $this->client_ip;
+        return  (string) ($this->client_ip ?? $this->getDI()->get('request')->getClientAddress() ?? null);
     }
 
     /**

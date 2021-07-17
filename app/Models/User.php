@@ -10,6 +10,12 @@ class User extends Model
     use TUser;
 
     /**
+     * Basic Fields
+     * @var array
+     */
+    const BASIC_FIELDS = ['id', 'firstname', 'lastname', 'username', 'avatar', 'phone',  'email', 'created_at', 'updated_at'];
+
+    /**
      *
      * @var string
      */
@@ -117,5 +123,16 @@ class User extends Model
             unset($data['password']);
         }
         return $data;
+    }
+
+
+    /**
+     * Get User Profile
+     *
+     * @return array
+     */
+    public function getProfile() : array
+    {
+        return $this->getData();
     }
 }
