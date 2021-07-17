@@ -1,6 +1,6 @@
-# micro-api
+# Micro App (Rest API)
 
-⚡ Micro API using Phalcon Framework
+⚡ Micro API using Phalcon PHP Framework.
 
 ## I. Requirements
 
