@@ -45,13 +45,23 @@ class UserMigration_100 extends Migration
                         ]
                     ),
                     new Column(
+                        'lastname',
+                        [
+                            'type' => Column::TYPE_VARCHAR,
+                            'notNull' => false,
+                            'size' => 50,
+                            'comment' => "Last Name",
+                            'after' => 'firstname'
+                        ]
+                    ),
+                    new Column(
                         'username',
                         [
                             'type' => Column::TYPE_VARCHAR,
                             'notNull' => false,
                             'size' => 100,
                             'comment' => "Username",
-                            'after' => 'firstname'
+                            'after' => 'lastname'
                         ]
                     ),
                     new Column(
@@ -140,16 +150,6 @@ class UserMigration_100 extends Migration
                             'size' => 40,
                             'comment' => "Update by Ip",
                             'after' => 'created_ip'
-                        ]
-                    ),
-                    new Column(
-                        'lastname',
-                        [
-                            'type' => Column::TYPE_VARCHAR,
-                            'notNull' => false,
-                            'size' => 50,
-                            'comment' => "Last Name",
-                            'after' => 'updated_ip'
                         ]
                     )
                 ],

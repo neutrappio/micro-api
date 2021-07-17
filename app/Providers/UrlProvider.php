@@ -4,12 +4,13 @@ declare(strict_types=1);
 namespace Mapi\Providers;
 
 use Closure;
+
 use Phalcon\Url\UrlResolver;
 
-use Mapi\Interfaces\IProvider;
+use Mapi\Core\Provider;
 use Mapi\Interfaces\IApplication;
 
-class UrlProvider implements IProvider
+class UrlProvider extends Provider
 {
     const SERVICE_NAME = "config";
 
@@ -20,8 +21,8 @@ class UrlProvider implements IProvider
 
     public function init(IApplication $application) : Closure
     {
-        return function () use ($application) {
-            $config = $application->getDiFactory()->getConfig();
+        return function () {
+            $config = $this->getConfig();
 
             $url = new UrlResolver();
             $url->setBaseUri($config->application->baseUri);

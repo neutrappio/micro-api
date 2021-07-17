@@ -7,4 +7,5 @@ declare(strict_types=1);
  *
  */
 return [
+    Mapi\Middlewares\AuthMiddleware::class
 ];

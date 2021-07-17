@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Mapi\Controllers;
+namespace Mapi\Core;
 
-use Phalcon\Mvc\Controller;
+use Phalcon\Mvc\Controller as PController;
 
 use Mapi\Interfaces\ISharedConst;
 
@@ -17,7 +17,7 @@ use function array_values;
 use function array_filter;
 use function htmlentities;
 
-class BaseController extends Controller implements ISharedConst
+class Controller extends PController implements ISharedConst
 {
 
     /**
@@ -43,7 +43,7 @@ class BaseController extends Controller implements ISharedConst
      * @param Micro $app
      * @return array|null
      */
-    public static function getRoutes(BaseController $controller) :? array
+    public static function getRoutes(Controller $controller) :? array
     {
         $routes = array_map(function ($item) {
             $route = $item->getPattern();

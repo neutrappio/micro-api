@@ -1,6 +1,6 @@
 <?php
 
-namespace Mapi\Middlewares;
+namespace Mapi\Core;
 
 use Exception;
 use function explode;
@@ -9,7 +9,7 @@ use function array_search;
 use Phalcon\Mvc\Micro;
 use Phalcon\Mvc\Micro\MiddlewareInterface;
 
-class BaseMiddleware implements MiddlewareInterface
+class Middleware implements MiddlewareInterface
 {
     protected Micro $app;
 

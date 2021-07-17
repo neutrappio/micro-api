@@ -1,6 +1,6 @@
 <?php
 
-namespace Mapi\Middleware;
+namespace Mapi\Middlewares;
 
 use DateTimeZone;
 use Phalcon\Mvc\Micro;
@@ -13,11 +13,11 @@ use Lcobucci\JWT\Validation\Constraint\PermittedFor;
 use Lcobucci\JWT\Validation\Constraint\SignedWith;
 
 use Mapi\Models\User;
+use Mapi\Core\Middleware;
 use Mapi\Libraries\Http\HttpCodes;
 use Mapi\Exceptions\PublicException;
-use Mapi\Middlewares\BaseMiddleware;
 
-class AuthMiddleware extends BaseMiddleware
+class AuthMiddleware extends Middleware
 {
     protected Micro $app;
 
