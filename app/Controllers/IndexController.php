@@ -1,18 +1,11 @@
 <?php
+declare(strict_types=1);
 
 namespace Mapi\Controllers;
 
-use Phalcon\Mvc\Controller;
-
-class IndexController extends Controller
+/**
+ *  Landing Index Controller
+ */
+class IndexController extends BaseController
 {
-    public function hellostring()
-    {
-        return 'hello world ! string';
-    }
-
-    public function helloarray()
-    {
-        return ['array'=> 'hello world ! array '];
-    }
 }

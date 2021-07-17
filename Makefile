@@ -16,6 +16,12 @@ dclean: ## dclean : Docker drop all volumes system files
 	@docker system prune -af
 	@docker volume prune -f
 
+console:
+	@docker-compose exec mapi_service_php bash
+
+migrate:
+	@docker-compose exec mapi_service_php phalcon migration run
+
 composer:
 	@docker-compose exec mapi_service_php composer install
 

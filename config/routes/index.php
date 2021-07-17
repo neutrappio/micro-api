@@ -5,11 +5,8 @@ use Phalcon\Mvc\Micro\Collection;
 use Mapi\Controllers\IndexController;
 
 $collection = new Collection();
-$collection->setHandler(new IndexController());
+$collection->setHandler(IndexController::class, true);
 
-$collection->get('/', 'hellostring');
-$collection->get('/array', 'helloarray');
-
-
+$collection->get('/', 'index');
 
 return $collection;

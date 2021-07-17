@@ -7,21 +7,29 @@ use Phalcon\Config;
  * Modified: prepend directory path of current file, because of this file own different ENV under between Apache and command line.
  * NOTE: please remove this comment.
  */
-defined('ENV_PATH') || define('ENV_PATH', dirname(__DIR__));
-defined('BASE_PATH') || define('BASE_PATH', getenv('BASE_PATH') ?? realpath(dirname(__FILE__) . '/..'));
+defined('BASE_PATH') || define('BASE_PATH', dirname(__DIR__));
 defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
 require_once(dirname(__DIR__) . '/vendor/autoload.php');
 
-(new Dotenv\Loader(ENV_PATH . '.env'))
-              ->parse()
-              ->toEnv();
+(new Dotenv\Loader(BASE_PATH . '/.env'))
+            ->parse()
+            ->toEnv()
+            ->putenv(true);
 
 $config =  new Config([
     'mode' => getenv('APP_ENV') ?? 'production',
 
+    'application' => [
+        'modelsDir'      => APP_PATH . '/Models/',
+        'controllersDir' => APP_PATH . '/Controllers/',
+        'migrationsDir'  => BASE_PATH . '/resources/migrations/',
+        'baseUri'        => '/',
+        'url'=> getenv("APP_FRONT_URL") ?? "http://localhost/",
+    ],
+
     'database' => [
-        'adapter'    => getenv('DB_ADAPTER') ?? 'Mysql',
+        'adapter'    => getenv('DB_ADAPTER') ?? 'Postgresql',
         'host'       => getenv('DB_HOST') ?? 'localhost',
         'username'   => getenv('DB_USER') ?? 'root',
         'password'   => getenv('DB_PASS') ?? '',
@@ -51,28 +59,12 @@ $config =  new Config([
         ]
     ],
 
-    'application' => [
-        'modelsDir'      => APP_PATH . '/Models/',
-        'controllersDir' => APP_PATH . '/Controllers/',
-        'migrationsDir'  => BASE_PATH . '/resources/migrations/',
-        'baseUri'        => '/',
-        'url'=> getenv("APP_FRONT_URL") ?? "http://localhost/",
-    ],
-
     'jwt' => [
         'url'  =>
         (((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || ($_SERVER['SERVER_PORT'] ?? null) == 443) ? "https://" : "http://")
         . ($_SERVER['HTTP_HOST'] ?? 'localhost') ,
         'timezone' => 'Europe/Paris',
         'secretkey'=> getenv('JWT_SIGNER_KEY_BASE64BASE') ?? "U0VDUkVU"
-    ],
-
-    'throttler' => [
-        'enable'=> true,
-        'cacheSercice' => 'cache',
-        'bucket_size'  => intval(getenv('RATE_LIMITING_BUCKET_SIZE') ?? 30), // the number of allowed hits in the period of time of reference
-        'refill_time'  => intval(getenv('RATE_LIMITING_REFILL_TIME') ?? 5), // the amount of time after that the counter will completely or partially reset (1m)
-        'refill_amount'  => intval(getenv('RATE_LIMITING_REFILL_AMOUNT') ?? 10), // the number of hits to be reset every time the refill_time passes
     ],
 
     'storage'=>  [
@@ -101,6 +93,5 @@ $config =  new Config([
         ],
     ]
 ]);
-
 
 return $config;
