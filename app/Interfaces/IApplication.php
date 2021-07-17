@@ -35,4 +35,11 @@ interface IApplication
      * @return Micro
      */
     public function getApp() : Micro;
+
+    /**
+     * Get middlewares list
+     *
+     * @return  array
+     */
+    public function getMiddlewares() : array;
 }

@@ -14,6 +14,7 @@ define('APP_PATH', BASE_PATH . '/app');
 $app = new Application();
 $app->setServices(require $app->getBasePath() . '/config/services.php');
 $app->setHandlers(require $app->getBasePath() . '/config/handlers.php');
+$app->setMiddlewares(require $app->getBasePath() . '/config/middlewares.php');
 
 
 try {
@@ -21,8 +22,8 @@ try {
      * Handle the request
      */
     $app->run($_SERVER['REQUEST_URI']);
+} catch (PublicException $e) {
 } catch (\Exception $e) {
     // Logger
     echo "Error : ", $e->getMessage();
-} catch (PublicException $e) {
 }

@@ -47,6 +47,13 @@ class Application implements IApplication
     private array $handlers = [];
 
     /**
+     * middlewares list
+     *
+     * @var array
+     */
+    private array $middlewares = [];
+
+    /**
      * App Constructor
      */
     public function __construct()
@@ -140,6 +147,20 @@ class Application implements IApplication
     }
 
     /**
+     * Set middlewares list
+     *
+     * @param  array  $middlewares  middlewares list
+     *
+     * @return  self
+     */
+    public function setMiddlewares(array $middlewares)
+    {
+        $this->middlewares = $middlewares;
+
+        return $this;
+    }
+
+    /**
      * Run App
      *
      * @return void
@@ -160,5 +181,15 @@ class Application implements IApplication
     public function getApp() : Micro
     {
         return $this->app;
+    }
+
+    /**
+     * Get middlewares list
+     *
+     * @return  array
+     */
+    public function getMiddlewares() : array
+    {
+        return $this->middlewares;
     }
 }

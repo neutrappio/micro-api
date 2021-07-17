@@ -28,7 +28,7 @@ class AuthMiddleware extends Middleware
             
             if (false !== is_null($authorization)) {
                 $app->response->setStatusCode(401, HttpCodes::HTTP_UNAUTHORIZED);
-                throw new PublicException("Please log in to access these resources");
+                throw new PublicException("Please log in to access these resources", HttpCodes::HTTP_UNAUTHORIZED);
                 return false;
             }
 
