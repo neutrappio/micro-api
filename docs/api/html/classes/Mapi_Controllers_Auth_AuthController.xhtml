@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Mapi\Controllers\Auth\AuthController</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Mapi_Controllers_Auth">Mapi\Controllers\Auth</a>
+          </li>
+          <li class="separator">AuthController</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Controllers/Auth/AuthController.php.xhtml#line22">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Mapi\Controllers\Auth\</small>AuthController</h1>
+        <h4>Client Auth Controller</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AuthController
+                extends <a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller.xhtml">Controller</a>
+            {<br/><ul class="none"><li>// constants</li><li>const REMEMBER_CLAIM = 'rmb';</li><li>const AUTH_TOKEN_TYPE = 'bearer';</li><li>const TOKEN_EXPIRE_TIME = "+24 hours";</li><li>const TOKEN_EXPIRE_TIME_REMEMBER = "+15 days";</li></ul><ul class="none"><li>// methods</li><li>public ?array <a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/login.xhtml">login</a>()
+                    </li><li>public ?array <a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/session.xhtml">session</a>()
+                    </li><li>public ?array <a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/register.xhtml">register</a>()
+                    </li><li>public array <a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/forgot.xhtml">forgot</a>()
+                    </li><li>private array <a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/returnSession.xhtml">returnSession</a>()
+                    </li><li>public ?<span title="Token">Token</span> <a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/generateJWTSessionToken.xhtml">generateJWTSessionToken</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Mapi\Core\Controller">Controller</span></li><li>public array <a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller/index.xhtml">index</a>()
+                        </li><li>public static array|null <a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller/getRoutes.xhtml">getRoutes</a>()
+                        </li><li>public static array|null <a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller/filterData.xhtml">filterData</a>()
+                        </li><li>public array <a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller/sanitizeData.xhtml">sanitizeData</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller.xhtml">Mapi\Core\Controller</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="REMEMBER_CLAIM">REMEMBER_CLAIM</td>
+              <td>'rmb'</td>
+            </tr>
+            <tr>
+              <td id="AUTH_TOKEN_TYPE">AUTH_TOKEN_TYPE</td>
+              <td>'bearer'</td>
+            </tr>
+            <tr>
+              <td id="TOKEN_EXPIRE_TIME">TOKEN_EXPIRE_TIME</td>
+              <td>"+24 hours"</td>
+            </tr>
+            <tr>
+              <td id="TOKEN_EXPIRE_TIME_REMEMBER">TOKEN_EXPIRE_TIME_REMEMBER</td>
+              <td>"+15 days"</td>
+            </tr>
+            <tr>
+              <td id="ACTIVE">ACTIVE</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="INACTIVE">INACTIVE</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="returnSession"><a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/returnSession.xhtml">returnSession()</a>
+                — Return session token</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="forgot"><a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/forgot.xhtml">forgot()</a>
+                — Forgot password action</li>
+            <li id="generateJWTSessionToken"><a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/generateJWTSessionToken.xhtml">generateJWTSessionToken()</a>
+                — Create New JWT Session Token</li>
+            <li id="login"><a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/login.xhtml">login()</a>
+                — Login Action</li>
+            <li id="register"><a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/register.xhtml">register()</a>
+                — Login Action</li>
+            <li id="session"><a title="Mapi\Controllers\Auth\AuthController" href="../classes/Mapi_Controllers_Auth_AuthController/session.xhtml">session()</a>
+                — Session</li>
+          </ul>
+          <h3>Inherited from <a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller.xhtml">Mapi\Core\Controller</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="filterData"><a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller/filterData.xhtml">filterData()</a>
+                — Filter Data &amp; return allowed fields data</li>
+            <li id="getRoutes"><a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller/getRoutes.xhtml">getRoutes()</a>
+                — Get List of Routes</li>
+            <li id="index"><a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller/index.xhtml">index()</a>
+                — Index : Get List of Routes</li>
+            <li id="sanitizeData"><a title="Mapi\Core\Controller" href="../classes/Mapi_Core_Controller/sanitizeData.xhtml">sanitizeData()</a>
+                — Sanitize Data</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

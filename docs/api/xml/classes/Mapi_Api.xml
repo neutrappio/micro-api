@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Api" namespace="Mapi" name="Api" abstract="false" final="false" start="10" end="49">
+  <file path="/home/yassine/neutrapp/github/micro-api/app" file="Api.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Api.php" size="783" time="2021-07-14T15:40:35+00:00" unixtime="1626277235" sha1="049874e1f7ec3f758226e0e137db842cff986edb" relative="Api.php"/>
+  <docblock>
+    <description compact="Api Class"/>
+  </docblock>
+  <member name="app" visibility="private" static="false" line="15">
+    <docblock>
+      <description compact="Application"/>
+    </docblock>
+  </member>
+  <member name="handlers" default="" type="array" visibility="private" static="false" line="22">
+    <docblock>
+      <description compact="Handlers list"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="32" end="36" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Api"/>
+      <param type="object" variable="$application">
+        <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+      </param>
+      <param type="array" variable="$handlers"/>
+      <return type="object">
+        <type full="Mapi\void" namespace="Mapi" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="application" byreference="false" type="object">
+      <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+    </parameter>
+    <parameter name="handlers" byreference="false" type="array" default=""/>
+  </constructor>
+  <method name="register" start="43" end="48" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Register handlers"/>
+      <return type="object">
+        <type full="Mapi\void" namespace="Mapi" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+</class>

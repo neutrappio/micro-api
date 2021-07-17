@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Mapi\Middlewares\AuthMiddleware</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Mapi_Middlewares">Mapi\Middlewares</a>
+          </li>
+          <li class="separator">AuthMiddleware</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Middlewares/AuthMiddleware.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Mapi\Middlewares\</small>AuthMiddleware</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AuthMiddleware
+                extends <a title="Mapi\Core\Middleware" href="../classes/Mapi_Core_Middleware.xhtml">Middleware</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$app</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="Mapi\Core\Middleware">Middleware</span></li><li>protected  <a href="#members">$app</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Mapi\Middlewares\AuthMiddleware" href="../classes/Mapi_Middlewares_AuthMiddleware/beforeExecuteRoute.xhtml">beforeExecuteRoute</a>()
+                    </li><li>protected ?<span title=""/> <a title="Mapi\Middlewares\AuthMiddleware" href="../classes/Mapi_Middlewares_AuthMiddleware/authorize.xhtml">authorize</a>()
+                    </li><li>public static ?string <a title="Mapi\Middlewares\AuthMiddleware" href="../classes/Mapi_Middlewares_AuthMiddleware/getBearerToken.xhtml">getBearerToken</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Mapi\Core\Middleware">Middleware</span></li><li>public void <a title="Mapi\Core\Middleware" href="../classes/Mapi_Core_Middleware/call.xhtml">call</a>()
+                        </li><li>public void <a title="Mapi\Core\Middleware" href="../classes/Mapi_Core_Middleware/getRouteName.xhtml">getRouteName</a>()
+                        </li><li>protected boolean <a title="Mapi\Core\Middleware" href="../classes/Mapi_Core_Middleware/matchRoute.xhtml">matchRoute</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Mapi\Core\Middleware" href="../classes/Mapi_Core_Middleware.xhtml">Mapi\Core\Middleware</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="app">
+              <strong>$app</strong>
+            </li>
+            <li id="app">
+              <strong>$app</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="authorize"><a title="Mapi\Middlewares\AuthMiddleware" href="../classes/Mapi_Middlewares_AuthMiddleware/authorize.xhtml">authorize()</a>
+                — Check Authorization of request</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="beforeExecuteRoute">
+              <a title="Mapi\Middlewares\AuthMiddleware" href="../classes/Mapi_Middlewares_AuthMiddleware/beforeExecuteRoute.xhtml">beforeExecuteRoute()</a>
+            </li>
+            <li id="getBearerToken"><a title="Mapi\Middlewares\AuthMiddleware" href="../classes/Mapi_Middlewares_AuthMiddleware/getBearerToken.xhtml">getBearerToken()</a>
+                — Get Bearer token from authorization header</li>
+          </ul>
+          <h3>Inherited from <a title="Mapi\Core\Middleware" href="../classes/Mapi_Core_Middleware.xhtml">Mapi\Core\Middleware</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="matchRoute"><a title="Mapi\Core\Middleware" href="../classes/Mapi_Core_Middleware/matchRoute.xhtml">matchRoute()</a>
+                — Regex Matched</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="call"><a title="Mapi\Core\Middleware" href="../classes/Mapi_Core_Middleware/call.xhtml">call()</a>
+                — Call</li>
+            <li id="getRouteName"><a title="Mapi\Core\Middleware" href="../classes/Mapi_Core_Middleware/getRouteName.xhtml">getRouteName()</a>
+                — Get Route Name</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

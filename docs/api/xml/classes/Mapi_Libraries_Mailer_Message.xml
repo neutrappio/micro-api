@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Libraries\Mailer\Message" namespace="Mapi\Libraries\Mailer" name="Message" abstract="false" final="false" start="7" end="33">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Libraries/Http/Mailer" file="Message.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Libraries/Http/Mailer/Message.php" size="474" time="2021-07-17T16:42:58+00:00" unixtime="1626540178" sha1="8337456f5600f0b15a9cb3b71aee5fc174f90500" relative="Libraries/Http/Mailer/Message.php"/>
+  <extends full="Swift_Message" namespace="" name="Swift_Message" unresolved="true"/>
+  <member name="mailer" visibility="private" static="false" line="9"/>
+  <method name="setMailer" start="17" end="22" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set Mailer"/>
+      <param type="object" variable="$mailer">
+        <type full="Mapi\Libraries\Mailer\Mailer" namespace="Mapi\Libraries\Mailer" name="Mailer"/>
+      </param>
+      <return resolution="self" type="object">
+        <type full="Mapi\Libraries\Mailer\Message" namespace="Mapi\Libraries\Mailer" name="Message"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Mapi\Libraries\Mailer\Message" namespace="Mapi\Libraries\Mailer" name="Message"/>
+    </return>
+    <parameter name="mailer" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="sendMail" start="29" end="32" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Send Mail"/>
+      <return type="object">
+        <type full="Mapi\Libraries\Mailer\void" namespace="Mapi\Libraries\Mailer" name="void"/>
+      </return>
+    </docblock>
+  </method>
+</class>

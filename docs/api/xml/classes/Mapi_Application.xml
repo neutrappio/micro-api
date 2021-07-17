@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Application" namespace="Mapi" name="Application" abstract="false" final="false" start="11" end="195">
+  <file path="/home/yassine/neutrapp/github/micro-api/app" file="Application.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Application.php" size="3245" time="2021-07-17T17:00:12+00:00" unixtime="1626541212" sha1="95115e8b2ccd2ddf7f22ba073667cc23687fecb0" relative="Application.php"/>
+  <implements full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+  <member name="app" visibility="private" static="false" line="19">
+    <docblock>
+      <description compact="Micro App"/>
+      <var type="object">
+        <type full="Phalcon\Mvc\Micro" namespace="Phalcon\Mvc" name="Micro"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="api" visibility="private" static="false" line="26">
+    <docblock>
+      <description compact="Api App"/>
+      <var type="object">
+        <type full="Mapi\Api" namespace="Mapi" name="Api"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="DiFactory" visibility="private" static="false" line="33">
+    <docblock>
+      <description compact="Di Facotry"/>
+      <var type="object">
+        <type full="Phalcon\Di\DiInterface" namespace="Phalcon\Di" name="DiInterface"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="services" default="" type="array" visibility="private" static="false" line="40">
+    <docblock>
+      <description compact="Services list"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="handlers" default="" type="array" visibility="private" static="false" line="47">
+    <docblock>
+      <description compact="Handlers list"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="middlewares" default="" type="array" visibility="private" static="false" line="54">
+    <docblock>
+      <description compact="middlewares list"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="59" end="62" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="App Constructor"/>
+    </docblock>
+  </constructor>
+  <method name="getBasePath" start="69" end="72" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get Project Base Path"/>
+      <return type="string"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="getAppPath" start="79" end="82" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get Application Path"/>
+      <return type="string"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="getDiFactory" start="89" end="92" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get di Facotry"/>
+      <return type="object">
+        <type full="Phalcon\Di\DiInterface" namespace="Phalcon\Di" name="DiInterface"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Phalcon\Di\DiInterface" namespace="Phalcon\Di" name="DiInterface"/>
+    </return>
+  </method>
+  <method name="loadServices" start="99" end="105" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Load Services"/>
+      <return type="object">
+        <type full="Mapi\void" namespace="Mapi" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+  <method name="initApp" start="112" end="119" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Init Application"/>
+      <return type="object">
+        <type full="Mapi\void" namespace="Mapi" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+  <method name="setServices" start="126" end="133" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the value of services"/>
+      <return resolution="self" type="object">
+        <type full="Mapi\Application" namespace="Mapi" name="Application"/>
+      </return>
+    </docblock>
+    <parameter name="services" byreference="false" type="array"/>
+  </method>
+  <method name="setHandlers" start="142" end="147" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set handlers list"/>
+      <param description="Handlers list" type="array" variable="$handlers"/>
+      <return resolution="self" type="object">
+        <type full="Mapi\Application" namespace="Mapi" name="Application"/>
+      </return>
+    </docblock>
+    <parameter name="handlers" byreference="false" type="array"/>
+  </method>
+  <method name="setMiddlewares" start="156" end="161" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set middlewares list"/>
+      <param description="middlewares list" type="array" variable="$middlewares"/>
+      <return resolution="self" type="object">
+        <type full="Mapi\Application" namespace="Mapi" name="Application"/>
+      </return>
+    </docblock>
+    <parameter name="middlewares" byreference="false" type="array"/>
+  </method>
+  <method name="run" start="168" end="174" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Run App"/>
+      <return type="object">
+        <type full="Mapi\void" namespace="Mapi" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <parameter name="url" byreference="false" type="string" default="&quot;/&quot;"/>
+  </method>
+  <method name="getApp" start="181" end="184" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get micro App"/>
+      <return type="object">
+        <type full="Phalcon\Mvc\Micro" namespace="Phalcon\Mvc" name="Micro"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Phalcon\Mvc\Micro" namespace="Phalcon\Mvc" name="Micro"/>
+    </return>
+  </method>
+  <method name="getMiddlewares" start="191" end="194" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get middlewares list"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <interface full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication">
+    <method name="getDiFactory" start="15" end="15" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get Di Factory"/>
+        <return type="object">
+          <type full="Phalcon\Di\DiInterface" namespace="Phalcon\Di" name="DiInterface"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="false">
+        <type full="Phalcon\Di\DiInterface" namespace="Phalcon\Di" name="DiInterface"/>
+      </return>
+    </method>
+    <method name="getAppPath" start="22" end="22" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get Application Path"/>
+        <return type="string"/>
+      </docblock>
+      <return type="string" nullable="false"/>
+    </method>
+    <method name="getBasePath" start="29" end="29" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get Project Base Path"/>
+        <return type="string"/>
+      </docblock>
+      <return type="string" nullable="false"/>
+    </method>
+    <method name="getApp" start="37" end="37" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get Application"/>
+        <return type="object">
+          <type full="Phalcon\Mvc\Micro" namespace="Phalcon\Mvc" name="Micro"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="false">
+        <type full="Phalcon\Mvc\Micro" namespace="Phalcon\Mvc" name="Micro"/>
+      </return>
+    </method>
+    <method name="getMiddlewares" start="44" end="44" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get middlewares list"/>
+        <return type="array"/>
+      </docblock>
+      <return type="array" nullable="false"/>
+    </method>
+  </interface>
+</class>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Validators\LoginValidator" namespace="Mapi\Validators" name="LoginValidator" abstract="false" final="false" start="13" end="57">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Validators" file="LoginValidator.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Validators/LoginValidator.php" size="1222" time="2021-07-17T18:01:43+00:00" unixtime="1626544903" sha1="5ec8c4504814b221994f95584b3778292d331445" relative="Validators/LoginValidator.php"/>
+  <extends full="Phalcon\Validation" namespace="Phalcon" name="Validation" unresolved="true"/>
+  <method name="initialize" start="15" end="56" abstract="false" final="false" static="false" visibility="public"/>
+</class>

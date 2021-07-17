@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Libraries\Mailer\Mailer" namespace="Mapi\Libraries\Mailer" name="Mailer" abstract="false" final="false" start="12" end="125">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Libraries/Http/Mailer" file="Mailer.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Libraries/Http/Mailer/Mailer.php" size="3053" time="2021-07-17T21:44:14+00:00" unixtime="1626558254" sha1="6b51486e7f90d2d30ba4ff2094de8ced2a1a7f86" relative="Libraries/Http/Mailer/Mailer.php"/>
+  <member name="configs" visibility="private" static="false" line="19">
+    <docblock>
+      <description compact="Mailer Configs"/>
+      <var type="object">
+        <type full="Mapi\Libraries\Mailer\Config" namespace="Mapi\Libraries\Mailer" name="Config"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="init" default="false" type="boolean" visibility="private" static="false" line="21"/>
+  <member name="mailer" visibility="private" static="false" line="22"/>
+  <member name="transport" visibility="private" static="false" line="23"/>
+  <constructor name="__construct" start="30" end="33" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Init Mailer Service"/>
+      <param type="array" variable="$configs"/>
+    </docblock>
+    <parameter name="configs" byreference="false" type="array"/>
+  </constructor>
+  <method name="initMailer" start="35" end="53" abstract="false" final="false" static="false" visibility="private"/>
+  <method name="createMessage" start="60" end="68" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Create New Message instance"/>
+      <return type="object">
+        <type full="Mapi\Libraries\Mailer\Message" namespace="Mapi\Libraries\Mailer" name="Message"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Mapi\Libraries\Mailer\Message" namespace="Mapi\Libraries\Mailer" name="Message"/>
+    </return>
+  </method>
+  <method name="sendMailTemplate" start="80" end="87" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Send Mail view"/>
+      <param type="string" variable="$reciver"/>
+      <param type="string" variable="$subject"/>
+      <param type="string" variable="$viewFile"/>
+      <param type="array" variable="$values"/>
+      <return type="object">
+        <type full="Mapi\Libraries\Mailer\void" namespace="Mapi\Libraries\Mailer" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="reciver" byreference="false" type="string"/>
+    <parameter name="subject" byreference="false" type="string"/>
+    <parameter name="viewFile" byreference="false" type="string"/>
+    <parameter name="values" byreference="false" type="array"/>
+  </method>
+  <method name="generateView" start="96" end="106" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Generate view from fileView and Array of variables"/>
+      <param type="string" variable="$viewFile"/>
+      <param type="array" variable="$values"/>
+      <return type="string"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="viewFile" byreference="false" type="string"/>
+    <parameter name="values" byreference="false" type="array"/>
+  </method>
+  <method name="getViewContent" start="114" end="124" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get View Content"/>
+      <param type="string" variable="$viewFile"/>
+      <return type="string"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="viewFile" byreference="false" type="string"/>
+  </method>
+</class>

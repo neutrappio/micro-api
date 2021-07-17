@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Validators\RegisterValidator" namespace="Mapi\Validators" name="RegisterValidator" abstract="false" final="false" start="14" end="108">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Validators" file="RegisterValidator.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Validators/RegisterValidator.php" size="2657" time="2021-07-17T18:02:27+00:00" unixtime="1626544947" sha1="c7e554ef6e60d290618cdd7b506615431cd24d88" relative="Validators/RegisterValidator.php"/>
+  <extends full="Phalcon\Validation" namespace="Phalcon" name="Validation" unresolved="true"/>
+  <method name="initialize" start="16" end="107" abstract="false" final="false" static="false" visibility="public"/>
+</class>

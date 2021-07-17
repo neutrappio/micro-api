@@ -2,6 +2,8 @@
 
 ⚡ Micro API using Phalcon PHP Framework.
 
+[PHPDocs](docs/api/html/namespaces.xhtml)
+
 ## I. Requirements
 
 - _A Laptop_ 😉

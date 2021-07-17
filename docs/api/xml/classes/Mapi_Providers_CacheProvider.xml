@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Providers\CacheProvider" namespace="Mapi\Providers" name="CacheProvider" abstract="false" final="false" start="16" end="47">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Providers" file="CacheProvider.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Providers/CacheProvider.php" size="1289" time="2021-07-17T16:29:12+00:00" unixtime="1626539352" sha1="9f218e11d6eb937bbccb23c593a4637c41600d01" relative="Providers/CacheProvider.php"/>
+  <extends full="Mapi\Core\Provider" namespace="Mapi\Core" name="Provider"/>
+  <constant type="string" name="SERVICE_NAME" value="&quot;cache&quot;"/>
+  <method name="init" start="20" end="46" abstract="false" final="false" static="false" visibility="public">
+    <return type="object" nullable="false">
+      <type full="Closure" namespace="" name="Closure"/>
+    </return>
+    <parameter name="application" byreference="false" type="object">
+      <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+    </parameter>
+  </method>
+  <parent full="Mapi\Core\Provider" namespace="Mapi\Core" name="Provider">
+    <implements full="Mapi\Interfaces\IProvider" namespace="Mapi\Interfaces" name="IProvider"/>
+    <constant type="{unknown}" name="SERVICE_NAME" value="'ops'"/>
+    <method name="getName" start="14" end="17" abstract="false" final="false" static="false" visibility="public">
+      <return type="string" nullable="false"/>
+    </method>
+  </parent>
+  <interface full="Mapi\Interfaces\IProvider" namespace="Mapi\Interfaces" name="IProvider">
+    <method name="getName" start="14" end="14" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get Service Name"/>
+        <return type="string"/>
+      </docblock>
+      <return type="string" nullable="false"/>
+    </method>
+    <method name="init" start="21" end="21" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Init Service Instance"/>
+        <return type="mixed"/>
+      </docblock>
+      <return type="object" nullable="false">
+        <type full="Closure" namespace="" name="Closure"/>
+      </return>
+      <parameter name="application" byreference="false" type="object">
+        <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+      </parameter>
+    </method>
+  </interface>
+</class>

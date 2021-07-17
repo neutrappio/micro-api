@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/home/yassine/neutrapp/github/micro-api/app">
+  <namespace name="Mapi\Libraries\Mailer">
+    <class name="Message" src="Libraries/Http/Mailer/Message.php" xml="classes/Mapi_Libraries_Mailer_Message.xml"/>
+    <class name="Mailer" src="Libraries/Http/Mailer/Mailer.php" xml="classes/Mapi_Libraries_Mailer_Mailer.xml"/>
+    <class name="Config" src="Libraries/Http/Mailer/Config.php" xml="classes/Mapi_Libraries_Mailer_Config.xml"/>
+  </namespace>
+  <namespace name="Mapi\Libraries\Http">
+    <class name="HttpCodes" src="Libraries/Http/HttpCodes.php" description="Class HttpCodes :  Http Library  Http Codes  Code Messages" xml="classes/Mapi_Libraries_Http_HttpCodes.xml"/>
+  </namespace>
+  <namespace name="Mapi\Controllers\User">
+    <class name="ProfileController" src="Controllers/User/ProfileController.php" description="Landing Index Controller" xml="classes/Mapi_Controllers_User_ProfileController.xml"/>
+  </namespace>
+  <namespace name="Mapi\Controllers\Auth">
+    <class name="LoggedController" src="Controllers/Auth/LoggedController.php" description="Client Auth Controller" xml="classes/Mapi_Controllers_Auth_LoggedController.xml"/>
+    <class name="AuthController" src="Controllers/Auth/AuthController.php" description="Client Auth Controller" xml="classes/Mapi_Controllers_Auth_AuthController.xml"/>
+  </namespace>
+  <namespace name="Mapi\Controllers">
+    <class name="IndexController" src="Controllers/IndexController.php" description="Landing Index Controller" xml="classes/Mapi_Controllers_IndexController.xml"/>
+  </namespace>
+  <namespace name="Mapi\Core">
+    <class name="Provider" src="Core/Provider.php" description="Abstract Provider class" xml="classes/Mapi_Core_Provider.xml"/>
+    <class name="Controller" src="Core/Controller.php" xml="classes/Mapi_Core_Controller.xml"/>
+    <class name="Model" src="Core/Model.php" xml="classes/Mapi_Core_Model.xml"/>
+    <class name="Middleware" src="Core/Middleware.php" xml="classes/Mapi_Core_Middleware.xml"/>
+  </namespace>
+  <namespace name="Mapi\Models">
+    <class name="User" src="Models/User.php" xml="classes/Mapi_Models_User.xml"/>
+  </namespace>
+  <namespace name="Mapi\Exceptions">
+    <class name="PublicException" src="Exceptions/PublicException.php" xml="classes/Mapi_Exceptions_PublicException.xml"/>
+  </namespace>
+  <namespace name="Mapi\Validators">
+    <class name="RegisterValidator" src="Validators/RegisterValidator.php" xml="classes/Mapi_Validators_RegisterValidator.xml"/>
+    <class name="LoginValidator" src="Validators/LoginValidator.php" xml="classes/Mapi_Validators_LoginValidator.xml"/>
+  </namespace>
+  <namespace name="Mapi\Middlewares">
+    <class name="AuthMiddleware" src="Middlewares/AuthMiddleware.php" xml="classes/Mapi_Middlewares_AuthMiddleware.xml"/>
+  </namespace>
+  <namespace name="Mapi">
+    <class name="Api" src="Api.php" description="Api Class" xml="classes/Mapi_Api.xml"/>
+    <class name="Application" src="Application.php" xml="classes/Mapi_Application.xml"/>
+  </namespace>
+  <namespace name="Mapi\Providers">
+    <class name="UtilsProvider" src="Providers/UtilsProvider.php" xml="classes/Mapi_Providers_UtilsProvider.xml"/>
+    <class name="JWTProvider" src="Providers/JWTProvider.php" xml="classes/Mapi_Providers_JWTProvider.xml"/>
+    <class name="DatabaseProvider" src="Providers/DatabaseProvider.php" xml="classes/Mapi_Providers_DatabaseProvider.xml"/>
+    <class name="CacheProvider" src="Providers/CacheProvider.php" xml="classes/Mapi_Providers_CacheProvider.xml"/>
+    <class name="MailerProvider" src="Providers/MailerProvider.php" xml="classes/Mapi_Providers_MailerProvider.xml"/>
+    <class name="UrlProvider" src="Providers/UrlProvider.php" xml="classes/Mapi_Providers_UrlProvider.xml"/>
+    <class name="ConfigProvider" src="Providers/ConfigProvider.php" xml="classes/Mapi_Providers_ConfigProvider.xml"/>
+    <class name="StorageProvider" src="Providers/StorageProvider.php" xml="classes/Mapi_Providers_StorageProvider.xml"/>
+  </namespace>
+  <namespace name="Mapi\Traits">
+    <trait name="TUser" src="Traits/TUser.php" xml="traits/Mapi_Traits_TUser.xml"/>
+  </namespace>
+  <namespace name="Mapi\Handlers">
+    <class name="Router" src="Handlers/Router.php" xml="classes/Mapi_Handlers_Router.xml"/>
+    <class name="Error" src="Handlers/Error.php" xml="classes/Mapi_Handlers_Error.xml"/>
+    <class name="NotFound" src="Handlers/NotFound.php" xml="classes/Mapi_Handlers_NotFound.xml"/>
+    <class name="Finish" src="Handlers/Finish.php" xml="classes/Mapi_Handlers_Finish.xml"/>
+    <class name="Middleware" src="Handlers/Middleware.php" xml="classes/Mapi_Handlers_Middleware.xml"/>
+    <class name="Sanitize" src="Handlers/Sanitize.php" xml="classes/Mapi_Handlers_Sanitize.xml"/>
+    <class name="Response" src="Handlers/Response.php" xml="classes/Mapi_Handlers_Response.xml"/>
+  </namespace>
+  <namespace name="Mapi\Interfaces">
+    <interface name="IProvider" src="Interfaces/IProvider.php" xml="interfaces/Mapi_Interfaces_IProvider.xml"/>
+    <interface name="IApplication" src="Interfaces/IApplication.php" xml="interfaces/Mapi_Interfaces_IApplication.xml"/>
+    <interface name="IHandler" src="Interfaces/IHandler.php" xml="interfaces/Mapi_Interfaces_IHandler.xml"/>
+    <interface name="ISharedConst" src="Interfaces/ISharedConst.php" xml="interfaces/Mapi_Interfaces_ISharedConst.xml"/>
+  </namespace>
+  <namespace name="">
+    <class name="Exception" xml="classes/Exception.xml"/>
+  </namespace>
+</index>

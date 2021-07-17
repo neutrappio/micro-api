@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Core\Provider" namespace="Mapi\Core" name="Provider" abstract="true" final="false" start="10" end="18">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Core" file="Provider.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Core/Provider.php" size="265" time="2021-07-17T15:20:50+00:00" unixtime="1626535250" sha1="0e3c4b27689756b6cc88e131f8530f4e86cce4ca" relative="Core/Provider.php"/>
+  <docblock>
+    <description compact="Abstract Provider class"/>
+  </docblock>
+  <implements full="Mapi\Interfaces\IProvider" namespace="Mapi\Interfaces" name="IProvider"/>
+  <constant type="{unknown}" name="SERVICE_NAME" value="'ops'"/>
+  <method name="getName" start="14" end="17" abstract="false" final="false" static="false" visibility="public">
+    <return type="string" nullable="false"/>
+  </method>
+  <interface full="Mapi\Interfaces\IProvider" namespace="Mapi\Interfaces" name="IProvider">
+    <method name="getName" start="14" end="14" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get Service Name"/>
+        <return type="string"/>
+      </docblock>
+      <return type="string" nullable="false"/>
+    </method>
+    <method name="init" start="21" end="21" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Init Service Instance"/>
+        <return type="mixed"/>
+      </docblock>
+      <return type="object" nullable="false">
+        <type full="Closure" namespace="" name="Closure"/>
+      </return>
+      <parameter name="application" byreference="false" type="object">
+        <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+      </parameter>
+    </method>
+  </interface>
+  <extenders>
+    <extender full="Mapi\Providers\UtilsProvider" namespace="Mapi\Providers" name="UtilsProvider"/>
+    <extender full="Mapi\Providers\JWTProvider" namespace="Mapi\Providers" name="JWTProvider"/>
+    <extender full="Mapi\Providers\DatabaseProvider" namespace="Mapi\Providers" name="DatabaseProvider"/>
+    <extender full="Mapi\Providers\CacheProvider" namespace="Mapi\Providers" name="CacheProvider"/>
+    <extender full="Mapi\Providers\MailerProvider" namespace="Mapi\Providers" name="MailerProvider"/>
+    <extender full="Mapi\Providers\UrlProvider" namespace="Mapi\Providers" name="UrlProvider"/>
+    <extender full="Mapi\Providers\ConfigProvider" namespace="Mapi\Providers" name="ConfigProvider"/>
+    <extender full="Mapi\Providers\StorageProvider" namespace="Mapi\Providers" name="StorageProvider"/>
+  </extenders>
+</class>

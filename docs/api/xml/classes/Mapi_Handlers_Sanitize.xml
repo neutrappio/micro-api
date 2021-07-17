@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Handlers\Sanitize" namespace="Mapi\Handlers" name="Sanitize" abstract="false" final="false" start="14" end="41">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Handlers" file="Sanitize.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Handlers/Sanitize.php" size="1073" time="2021-07-14T15:50:57+00:00" unixtime="1626277857" sha1="722867e6efe2ad16b2a677972220559e37cd4c92" relative="Handlers/Sanitize.php"/>
+  <implements full="Mapi\Interfaces\IHandler" namespace="Mapi\Interfaces" name="IHandler"/>
+  <method name="register" start="16" end="40" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="application" byreference="false" type="object">
+      <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+    </parameter>
+  </method>
+  <interface full="Mapi\Interfaces\IHandler" namespace="Mapi\Interfaces" name="IHandler">
+    <method name="register" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <return type="void" nullable="false"/>
+      <parameter name="application" byreference="false" type="object">
+        <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+      </parameter>
+    </method>
+  </interface>
+</class>

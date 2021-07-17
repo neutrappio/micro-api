@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/home/yassine/neutrapp/github/micro-api/app">
+    <dir name="Libraries">
+      <dir name="Http">
+        <dir name="Mailer">
+          <file name="Message.php" size="474" time="2021-07-17T16:42:58+00:00" unixtime="1626540178" sha1="8337456f5600f0b15a9cb3b71aee5fc174f90500" xml="tokens/Libraries/Http/Mailer/Message.php.xml"/>
+          <file name="Mailer.php" size="3053" time="2021-07-17T21:44:14+00:00" unixtime="1626558254" sha1="6b51486e7f90d2d30ba4ff2094de8ced2a1a7f86" xml="tokens/Libraries/Http/Mailer/Mailer.php.xml"/>
+          <file name="Config.php" size="1741" time="2021-07-17T16:39:19+00:00" unixtime="1626539959" sha1="5d97b82695f2e4a512e1598b6e9685e0cf4d124a" xml="tokens/Libraries/Http/Mailer/Config.php.xml"/>
+        </dir>
+        <file name="HttpCodes.php" size="5207" time="2021-07-17T21:24:33+00:00" unixtime="1626557073" sha1="0c556e20bd615ac63b0da0ca51782db4eccea6d0" xml="tokens/Libraries/Http/HttpCodes.php.xml"/>
+      </dir>
+    </dir>
+    <dir name="Controllers">
+      <dir name="User">
+        <file name="ProfileController.php" size="401" time="2021-07-17T21:47:20+00:00" unixtime="1626558440" sha1="fa058ea3cd6c871f29e9f7ff29687e57e980602a" xml="tokens/Controllers/User/ProfileController.php.xml"/>
+      </dir>
+      <dir name="Auth">
+        <file name="LoggedController.php" size="728" time="2021-07-17T21:46:08+00:00" unixtime="1626558368" sha1="266f674bdd0715f70713ea982ad7631f9471f56d" xml="tokens/Controllers/Auth/LoggedController.php.xml"/>
+        <file name="AuthController.php" size="6945" time="2021-07-17T18:05:33+00:00" unixtime="1626545133" sha1="b0c3080ae3ddf7a1ed50e4f1148d415f8f3bc861" xml="tokens/Controllers/Auth/AuthController.php.xml"/>
+      </dir>
+      <file name="IndexController.php" size="170" time="2021-07-17T14:48:43+00:00" unixtime="1626533323" sha1="849624bcd210effc89ffd3f4c5dfe463d3221e6a" xml="tokens/Controllers/IndexController.php.xml"/>
+    </dir>
+    <dir name="Core">
+      <file name="Provider.php" size="265" time="2021-07-17T15:20:50+00:00" unixtime="1626535250" sha1="0e3c4b27689756b6cc88e131f8530f4e86cce4ca" xml="tokens/Core/Provider.php.xml"/>
+      <file name="Controller.php" size="2655" time="2021-07-17T17:44:04+00:00" unixtime="1626543844" sha1="7a3ac83710b45ad61a9bcb09bdcf3630dfbe91d3" xml="tokens/Core/Controller.php.xml"/>
+      <file name="Model.php" size="5784" time="2021-07-17T21:32:42+00:00" unixtime="1626557562" sha1="c673988aa8997dfbf64c9d4b3751cb5746cd324f" xml="tokens/Core/Model.php.xml"/>
+      <file name="Middleware.php" size="1095" time="2021-07-17T15:27:23+00:00" unixtime="1626535643" sha1="cd9430cbfbbf5e92d6e870365515908e52695bbe" xml="tokens/Core/Middleware.php.xml"/>
+    </dir>
+    <dir name="Models">
+      <file name="User.php" size="1890" time="2021-07-17T21:40:07+00:00" unixtime="1626558007" sha1="27e4cfc7e6f5e2cb1f706f7b255d19962bd913ae" xml="tokens/Models/User.php.xml"/>
+    </dir>
+    <dir name="Exceptions">
+      <file name="PublicException.php" size="95" time="2021-07-14T15:03:49+00:00" unixtime="1626275029" sha1="cc9bbec8892f463423939a47436f94e8f845c45c" xml="tokens/Exceptions/PublicException.php.xml"/>
+    </dir>
+    <dir name="Validators">
+      <file name="RegisterValidator.php" size="2657" time="2021-07-17T18:02:27+00:00" unixtime="1626544947" sha1="c7e554ef6e60d290618cdd7b506615431cd24d88" xml="tokens/Validators/RegisterValidator.php.xml"/>
+      <file name="LoginValidator.php" size="1222" time="2021-07-17T18:01:43+00:00" unixtime="1626544903" sha1="5ec8c4504814b221994f95584b3778292d331445" xml="tokens/Validators/LoginValidator.php.xml"/>
+    </dir>
+    <dir name="Middlewares">
+      <file name="AuthMiddleware.php" size="3844" time="2021-07-17T17:05:16+00:00" unixtime="1626541516" sha1="09575fa207ad4f9edc7db544f2317685cfc788f5" xml="tokens/Middlewares/AuthMiddleware.php.xml"/>
+    </dir>
+    <file name="Api.php" size="783" time="2021-07-14T15:40:35+00:00" unixtime="1626277235" sha1="049874e1f7ec3f758226e0e137db842cff986edb" xml="tokens/Api.php.xml"/>
+    <dir name="Providers">
+      <file name="UtilsProvider.php" size="664" time="2021-07-17T16:46:15+00:00" unixtime="1626540375" sha1="e9d5dfa6392cf5df07fb0e22a29179e5dd3a8343" xml="tokens/Providers/UtilsProvider.php.xml"/>
+      <file name="JWTProvider.php" size="1075" time="2021-07-17T17:03:04+00:00" unixtime="1626541384" sha1="bc6ffd3335f7827dda5c407c51f06c82a5630a62" xml="tokens/Providers/JWTProvider.php.xml"/>
+      <file name="DatabaseProvider.php" size="1283" time="2021-07-17T15:20:34+00:00" unixtime="1626535234" sha1="3d888fa8e667b426d9b40f42238ee0e243ee19ea" xml="tokens/Providers/DatabaseProvider.php.xml"/>
+      <file name="CacheProvider.php" size="1289" time="2021-07-17T16:29:12+00:00" unixtime="1626539352" sha1="9f218e11d6eb937bbccb23c593a4637c41600d01" xml="tokens/Providers/CacheProvider.php.xml"/>
+      <file name="MailerProvider.php" size="464" time="2021-07-17T16:44:31+00:00" unixtime="1626540271" sha1="cc7a4e4113266f29ea94fd8831bba0d5e9c56e9b" xml="tokens/Providers/MailerProvider.php.xml"/>
+      <file name="UrlProvider.php" size="606" time="2021-07-17T15:21:37+00:00" unixtime="1626535297" sha1="c0feef262726f5915f557f8eee20b1e17c4e8e86" xml="tokens/Providers/UrlProvider.php.xml"/>
+      <file name="ConfigProvider.php" size="422" time="2021-07-17T15:21:09+00:00" unixtime="1626535269" sha1="0b80db71f3e7ed5a1c7e552547f36a28a1add93b" xml="tokens/Providers/ConfigProvider.php.xml"/>
+      <file name="StorageProvider.php" size="454" time="2021-07-17T16:36:27+00:00" unixtime="1626539787" sha1="2dd8a24ff97294b6b6588e4498a4bc9e8aea29aa" xml="tokens/Providers/StorageProvider.php.xml"/>
+    </dir>
+    <dir name="Traits">
+      <file name="TUser.php" size="2186" time="2021-07-17T21:38:43+00:00" unixtime="1626557923" sha1="a2e6d1bd270e5240dfbbda8c0e030725fa0acd6d" xml="tokens/Traits/TUser.php.xml"/>
+    </dir>
+    <file name="Application.php" size="3245" time="2021-07-17T17:00:12+00:00" unixtime="1626541212" sha1="95115e8b2ccd2ddf7f22ba073667cc23687fecb0" xml="tokens/Application.php.xml"/>
+    <dir name="Handlers">
+      <file name="Router.php" size="476" time="2021-07-14T15:44:22+00:00" unixtime="1626277462" sha1="9a69f4768d7535051ca0cee55f0fc403433ae769" xml="tokens/Handlers/Router.php.xml"/>
+      <file name="Error.php" size="2237" time="2021-07-17T21:25:01+00:00" unixtime="1626557101" sha1="37a65abea53263c12aab250263b1e80090877883" xml="tokens/Handlers/Error.php.xml"/>
+      <file name="NotFound.php" size="359" time="2021-07-14T15:41:05+00:00" unixtime="1626277265" sha1="d63564f1f53ba39719266754f454353448cc297c" xml="tokens/Handlers/NotFound.php.xml"/>
+      <file name="Finish.php" size="608" time="2021-07-14T15:38:55+00:00" unixtime="1626277135" sha1="b09e96ba6b828c403e0d436d202fca9c44f65a0e" xml="tokens/Handlers/Finish.php.xml"/>
+      <file name="Middleware.php" size="591" time="2021-07-17T17:02:05+00:00" unixtime="1626541325" sha1="ba11b9b2b3e2329070be1935d6cf0249ab8ff48e" xml="tokens/Handlers/Middleware.php.xml"/>
+      <file name="Sanitize.php" size="1073" time="2021-07-14T15:50:57+00:00" unixtime="1626277857" sha1="722867e6efe2ad16b2a677972220559e37cd4c92" xml="tokens/Handlers/Sanitize.php.xml"/>
+      <file name="Response.php" size="1226" time="2021-07-14T15:40:02+00:00" unixtime="1626277202" sha1="0070ba8bda306879f79ad9521ff7284cc5d89b34" xml="tokens/Handlers/Response.php.xml"/>
+    </dir>
+    <dir name="Interfaces">
+      <file name="IProvider.php" size="323" time="2021-07-14T14:53:04+00:00" unixtime="1626274384" sha1="2cc59f1b24035057a6caa214edd3de0e12fffeeb" xml="tokens/Interfaces/IProvider.php.xml"/>
+      <file name="IApplication.php" size="699" time="2021-07-17T17:00:48+00:00" unixtime="1626541248" sha1="97529676c22fbd66da7e24f5ef4d5f3b181b3f6f" xml="tokens/Interfaces/IApplication.php.xml"/>
+      <file name="IHandler.php" size="122" time="2021-07-14T15:34:54+00:00" unixtime="1626276894" sha1="d90319aa8b92998803dcff182fc0d0a28fcbd1b5" xml="tokens/Interfaces/IHandler.php.xml"/>
+      <file name="ISharedConst.php" size="133" time="2021-07-17T18:18:08+00:00" unixtime="1626545888" sha1="682d76242b6c326e8ddbb5d18895353f69a55d52" xml="tokens/Interfaces/ISharedConst.php.xml"/>
+    </dir>
+  </dir>
+</source>

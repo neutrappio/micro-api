@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Mapi\Interfaces\IHandler" namespace="Mapi\Interfaces" name="IHandler" abstract="false" final="false" start="5" end="8">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Interfaces" file="IHandler.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Interfaces/IHandler.php" size="122" time="2021-07-14T15:34:54+00:00" unixtime="1626276894" sha1="d90319aa8b92998803dcff182fc0d0a28fcbd1b5" relative="Interfaces/IHandler.php"/>
+  <method name="register" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="application" byreference="false" type="object">
+      <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+    </parameter>
+  </method>
+  <implementors>
+    <class full="Mapi\Handlers\Router" namespace="Mapi\Handlers" name="Router"/>
+    <class full="Mapi\Handlers\Error" namespace="Mapi\Handlers" name="Error"/>
+    <class full="Mapi\Handlers\NotFound" namespace="Mapi\Handlers" name="NotFound"/>
+    <class full="Mapi\Handlers\Finish" namespace="Mapi\Handlers" name="Finish"/>
+    <class full="Mapi\Handlers\Middleware" namespace="Mapi\Handlers" name="Middleware"/>
+    <class full="Mapi\Handlers\Sanitize" namespace="Mapi\Handlers" name="Sanitize"/>
+    <class full="Mapi\Handlers\Response" namespace="Mapi\Handlers" name="Response"/>
+  </implementors>
+</interface>

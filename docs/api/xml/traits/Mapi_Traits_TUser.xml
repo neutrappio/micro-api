@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trait xmlns="http://xml.phpdox.net/src" full="Mapi\Traits\TUser" namespace="Mapi\Traits" name="TUser" abstract="false" final="false" start="11" end="113">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Traits" file="TUser.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Traits/TUser.php" size="2186" time="2021-07-17T21:38:43+00:00" unixtime="1626557923" sha1="a2e6d1bd270e5240dfbbda8c0e030725fa0acd6d" relative="Traits/TUser.php"/>
+  <method name="validation" start="19" end="41" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Validations and business logic"/>
+      <return type="boolean"/>
+    </docblock>
+  </method>
+  <method name="beforeCreate" start="47" end="52" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="before Create"/>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+  <method name="beforeUpdate" start="57" end="64" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Before Save"/>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+  <method name="validatePassword" start="71" end="77" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Validate Password"/>
+    </docblock>
+    <return type="bool" nullable="false"/>
+    <parameter name="password" byreference="false" type="string"/>
+  </method>
+  <method name="hashPassword" start="83" end="88" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Hash Password"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="password" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSessionToken" start="95" end="98" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get the value of sessionToken"/>
+      <return type="object">
+        <type full="Mapi\Traits\Token|null" namespace="Mapi\Traits" name="Token|null"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="true">
+      <type full="Lcobucci\JWT\Token" namespace="Lcobucci\JWT" name="Token"/>
+    </return>
+  </method>
+  <method name="setSessionToken" start="107" end="112" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the value of sessionToken"/>
+      <param type="object" variable="$sessionToken">
+        <type full="Lcobucci\JWT\Token" namespace="Lcobucci\JWT" name="Token"/>
+      </param>
+      <return resolution="self" type="object">
+        <type full="Mapi\Traits\TUser" namespace="Mapi\Traits" name="TUser"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="true">
+      <type full="Mapi\Traits\TUser" namespace="Mapi\Traits" name="TUser"/>
+    </return>
+    <parameter name="sessionToken" byreference="false" type="object">
+      <type full="Lcobucci\JWT\Token" namespace="Lcobucci\JWT" name="Token"/>
+    </parameter>
+  </method>
+  <users>
+    <class full="Mapi\Models\User" namespace="Mapi\Models" name="User"/>
+  </users>
+</trait>

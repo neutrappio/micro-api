@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Controllers\User\ProfileController" namespace="Mapi\Controllers\User" name="ProfileController" abstract="false" final="false" start="12" end="25">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Controllers/User" file="ProfileController.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Controllers/User/ProfileController.php" size="401" time="2021-07-17T21:47:20+00:00" unixtime="1626558440" sha1="fa058ea3cd6c871f29e9f7ff29687e57e980602a" relative="Controllers/User/ProfileController.php"/>
+  <docblock>
+    <description compact="Landing Index Controller"/>
+  </docblock>
+  <extends full="Mapi\Controllers\Auth\LoggedController" namespace="Mapi\Controllers\Auth" name="LoggedController"/>
+  <method name="index" start="19" end="24" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Index Action"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <parent full="Mapi\Controllers\Auth\LoggedController" namespace="Mapi\Controllers\Auth" name="LoggedController">
+    <extends full="Mapi\Core\Controller" namespace="Mapi\Core" name="Controller"/>
+    <constant type="{unknown}" name="AUTH_KEY" value="'user'">
+      <docblock>
+        <var type="string"/>
+      </docblock>
+    </constant>
+    <member name="user" visibility="protected" static="false" line="23">
+      <docblock>
+        <description compact="Logged User"/>
+        <var type="object">
+          <type full="Mapi\Models\User" namespace="Mapi\Models" name="User"/>
+        </var>
+      </docblock>
+    </member>
+    <method name="onConstruct" start="31" end="36" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="On Construct , Bind User into controller"/>
+        <return type="object">
+          <type full="Mapi\Controllers\Auth\void" namespace="Mapi\Controllers\Auth" name="void"/>
+        </return>
+      </docblock>
+      <return type="void" nullable="false"/>
+    </method>
+    <method name="getUser" start="41" end="44" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get the value of user"/>
+      </docblock>
+      <return type="object" nullable="false">
+        <type full="Mapi\Models\User" namespace="Mapi\Models" name="User"/>
+      </return>
+    </method>
+  </parent>
+  <parent full="Mapi\Core\Controller" namespace="Mapi\Core" name="Controller">
+    <extends full="Phalcon\Mvc\Controller" namespace="Phalcon\Mvc" name="Controller" unresolved="true"/>
+    <implements full="Mapi\Interfaces\ISharedConst" namespace="Mapi\Interfaces" name="ISharedConst"/>
+    <method name="index" start="28" end="38" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Index : Get List of Routes"/>
+        <return type="array"/>
+      </docblock>
+      <return type="array" nullable="false"/>
+    </method>
+    <method name="getRoutes" start="46" end="64" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Get List of Routes"/>
+        <param type="object" variable="$app">
+          <type full="Mapi\Core\Micro" namespace="Mapi\Core" name="Micro"/>
+        </param>
+        <return type="object">
+          <type full="Mapi\Core\array|null" namespace="Mapi\Core" name="array|null"/>
+        </return>
+      </docblock>
+      <return type="array" nullable="true"/>
+      <parameter name="controller" byreference="false" type="object">
+        <type full="Mapi\Core\Controller" namespace="Mapi\Core" name="Controller"/>
+      </parameter>
+    </method>
+    <method name="filterData" start="74" end="85" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Filter Data &amp; return allowed fields data"/>
+        <param type="array" variable="$dataArray"/>
+        <param type="array" variable="$excludes"/>
+        <param type="array" variable="$includes"/>
+        <return type="object">
+          <type full="Mapi\Core\array|null" namespace="Mapi\Core" name="array|null"/>
+        </return>
+      </docblock>
+      <return type="array" nullable="true"/>
+      <parameter name="dataArray" byreference="false" type="array"/>
+      <parameter name="excludes" byreference="false" type="array" default=""/>
+      <parameter name="includes" byreference="false" type="array" default=""/>
+    </method>
+    <method name="sanitizeData" start="93" end="99" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Sanitize Data"/>
+        <param type="array" variable="$data"/>
+        <return type="array"/>
+      </docblock>
+      <return type="array" nullable="false"/>
+      <parameter name="data" byreference="false" type="array"/>
+    </method>
+  </parent>
+  <interface full="Mapi\Interfaces\ISharedConst" namespace="Mapi\Interfaces" name="ISharedConst">
+    <constant type="{unknown}" name="ACTIVE" value="1"/>
+    <constant type="{unknown}" name="INACTIVE" value="1"/>
+  </interface>
+</class>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Libraries\Http\HttpCodes" namespace="Mapi\Libraries\Http" name="HttpCodes" abstract="false" final="false" start="12" end="162">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Libraries/Http" file="HttpCodes.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Libraries/Http/HttpCodes.php" size="5207" time="2021-07-17T21:24:33+00:00" unixtime="1626557073" sha1="0c556e20bd615ac63b0da0ca51782db4eccea6d0" relative="Libraries/Http/HttpCodes.php"/>
+  <docblock>
+    <description compact="Class HttpCodes :  Http Library  Http Codes  Code Messages"/>
+  </docblock>
+  <constant type="integer" name="HTTP_CONTINUE" value="100"/>
+  <constant type="integer" name="HTTP_SWITCHING_PROTOCOLS" value="101"/>
+  <constant type="integer" name="HTTP_OK" value="200"/>
+  <constant type="integer" name="HTTP_CREATED" value="201"/>
+  <constant type="integer" name="HTTP_ACCEPTED" value="202"/>
+  <constant type="integer" name="HTTP_NONAUTHORITATIVE_INFORMATION" value="203"/>
+  <constant type="integer" name="HTTP_NO_CONTENT" value="204"/>
+  <constant type="integer" name="HTTP_RESET_CONTENT" value="205"/>
+  <constant type="integer" name="HTTP_PARTIAL_CONTENT" value="206"/>
+  <constant type="integer" name="HTTP_MULTIPLE_CHOICES" value="300"/>
+  <constant type="integer" name="HTTP_MOVED_PERMANENTLY" value="301"/>
+  <constant type="integer" name="HTTP_FOUND" value="302"/>
+  <constant type="integer" name="HTTP_SEE_OTHER" value="303"/>
+  <constant type="integer" name="HTTP_NOT_MODIFIED" value="304"/>
+  <constant type="integer" name="HTTP_USE_PROXY" value="305"/>
+  <constant type="integer" name="HTTP_UNUSED" value="306"/>
+  <constant type="integer" name="HTTP_TEMPORARY_REDIRECT" value="307"/>
+  <constant type="integer" name="errorCodesBeginAt" value="400"/>
+  <constant type="integer" name="HTTP_BAD_REQUEST" value="400"/>
+  <constant type="integer" name="HTTP_UNAUTHORIZED" value="401"/>
+  <constant type="integer" name="HTTP_PAYMENT_REQUIRED" value="402"/>
+  <constant type="integer" name="HTTP_FORBIDDEN" value="403"/>
+  <constant type="integer" name="HTTP_NOT_FOUND" value="404"/>
+  <constant type="integer" name="HTTP_METHOD_NOT_ALLOWED" value="405"/>
+  <constant type="integer" name="HTTP_NOT_ACCEPTABLE" value="406"/>
+  <constant type="integer" name="HTTP_PROXY_AUTHENTICATION_REQUIRED" value="407"/>
+  <constant type="integer" name="HTTP_REQUEST_TIMEOUT" value="408"/>
+  <constant type="integer" name="HTTP_CONFLICT" value="409"/>
+  <constant type="integer" name="HTTP_GONE" value="410"/>
+  <constant type="integer" name="HTTP_LENGTH_REQUIRED" value="411"/>
+  <constant type="integer" name="HTTP_PRECONDITION_FAILED" value="412"/>
+  <constant type="integer" name="HTTP_REQUEST_ENTITY_TOO_LARGE" value="413"/>
+  <constant type="integer" name="HTTP_REQUEST_URI_TOO_LONG" value="414"/>
+  <constant type="integer" name="HTTP_UNSUPPORTED_MEDIA_TYPE" value="415"/>
+  <constant type="integer" name="HTTP_REQUESTED_RANGE_NOT_SATISFIABLE" value="416"/>
+  <constant type="integer" name="HTTP_EXPECTATION_FAILED" value="417"/>
+  <constant type="integer" name="HTTP_TOO_MANY_REQUESTS" value="429"/>
+  <constant type="integer" name="HTTP_INTERNAL_SERVER_ERROR" value="500"/>
+  <constant type="integer" name="HTTP_NOT_IMPLEMENTED" value="501"/>
+  <constant type="integer" name="HTTP_BAD_GATEWAY" value="502"/>
+  <constant type="integer" name="HTTP_SERVICE_UNAVAILABLE" value="503"/>
+  <constant type="integer" name="HTTP_GATEWAY_TIMEOUT" value="504"/>
+  <constant type="integer" name="HTTP_VERSION_NOT_SUPPORTED" value="505"/>
+  <constant type="array" name="HTTP_MESSAGES" value=""/>
+  <method name="canHaveBody" start="128" end="137" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Response can have body"/>
+      <param type="int" variable="$code"/>
+      <return type="object">
+        <type full="Mapi\Libraries\Http\bool" namespace="Mapi\Libraries\Http" name="bool"/>
+      </return>
+    </docblock>
+    <return type="bool" nullable="false"/>
+    <parameter name="code" byreference="false" type="int"/>
+  </method>
+  <method name="parseCode" start="145" end="150" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Validate Status Code"/>
+      <param type="mixed" variable="$code"/>
+      <return type="integer"/>
+    </docblock>
+    <return type="int" nullable="false"/>
+    <parameter name="code" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getMessageByCode" start="158" end="161" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get Message By Code"/>
+      <param type="mixed" variable="$code"/>
+      <return type="string"/>
+    </docblock>
+    <return type="string" nullable="true"/>
+    <parameter name="code" byreference="false" type="{unknown}"/>
+  </method>
+</class>

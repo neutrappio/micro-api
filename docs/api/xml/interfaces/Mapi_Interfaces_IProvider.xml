@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Mapi\Interfaces\IProvider" namespace="Mapi\Interfaces" name="IProvider" abstract="false" final="false" start="7" end="22">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Interfaces" file="IProvider.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Interfaces/IProvider.php" size="323" time="2021-07-14T14:53:04+00:00" unixtime="1626274384" sha1="2cc59f1b24035057a6caa214edd3de0e12fffeeb" relative="Interfaces/IProvider.php"/>
+  <method name="getName" start="14" end="14" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get Service Name"/>
+      <return type="string"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="init" start="21" end="21" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Init Service Instance"/>
+      <return type="mixed"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Closure" namespace="" name="Closure"/>
+    </return>
+    <parameter name="application" byreference="false" type="object">
+      <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+    </parameter>
+  </method>
+  <implementors>
+    <class full="Mapi\Core\Provider" namespace="Mapi\Core" name="Provider"/>
+    <class full="Mapi\Providers\UtilsProvider" namespace="Mapi\Providers" name="UtilsProvider"/>
+    <class full="Mapi\Providers\JWTProvider" namespace="Mapi\Providers" name="JWTProvider"/>
+    <class full="Mapi\Providers\DatabaseProvider" namespace="Mapi\Providers" name="DatabaseProvider"/>
+    <class full="Mapi\Providers\CacheProvider" namespace="Mapi\Providers" name="CacheProvider"/>
+    <class full="Mapi\Providers\MailerProvider" namespace="Mapi\Providers" name="MailerProvider"/>
+    <class full="Mapi\Providers\UrlProvider" namespace="Mapi\Providers" name="UrlProvider"/>
+    <class full="Mapi\Providers\ConfigProvider" namespace="Mapi\Providers" name="ConfigProvider"/>
+    <class full="Mapi\Providers\StorageProvider" namespace="Mapi\Providers" name="StorageProvider"/>
+  </implementors>
+</interface>

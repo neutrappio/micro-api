@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Handlers\Middleware" namespace="Mapi\Handlers" name="Middleware" abstract="false" final="false" start="12" end="26">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Handlers" file="Middleware.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Handlers/Middleware.php" size="591" time="2021-07-17T17:02:05+00:00" unixtime="1626541325" sha1="ba11b9b2b3e2329070be1935d6cf0249ab8ff48e" relative="Handlers/Middleware.php"/>
+  <implements full="Mapi\Interfaces\IHandler" namespace="Mapi\Interfaces" name="IHandler"/>
+  <method name="register" start="14" end="25" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="application" byreference="false" type="object">
+      <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+    </parameter>
+  </method>
+  <interface full="Mapi\Interfaces\IHandler" namespace="Mapi\Interfaces" name="IHandler">
+    <method name="register" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <return type="void" nullable="false"/>
+      <parameter name="application" byreference="false" type="object">
+        <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+      </parameter>
+    </method>
+  </interface>
+</class>

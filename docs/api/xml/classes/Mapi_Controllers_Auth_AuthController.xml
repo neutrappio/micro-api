@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Controllers\Auth\AuthController" namespace="Mapi\Controllers\Auth" name="AuthController" abstract="false" final="false" start="22" end="245">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Controllers/Auth" file="AuthController.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Controllers/Auth/AuthController.php" size="6945" time="2021-07-17T18:05:33+00:00" unixtime="1626545133" sha1="b0c3080ae3ddf7a1ed50e4f1148d415f8f3bc861" relative="Controllers/Auth/AuthController.php"/>
+  <docblock>
+    <description compact="Client Auth Controller"/>
+  </docblock>
+  <extends full="Mapi\Core\Controller" namespace="Mapi\Core" name="Controller"/>
+  <constant type="string" name="REMEMBER_CLAIM" value="'rmb'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="AUTH_TOKEN_TYPE" value="'bearer'">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="TOKEN_EXPIRE_TIME" value="&quot;+24 hours&quot;">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="TOKEN_EXPIRE_TIME_REMEMBER" value="&quot;+15 days&quot;">
+    <docblock>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <method name="login" start="41" end="70" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Login Action"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="true"/>
+    <inline>
+      <comment value="remember me" line="63"/>
+      <comment value="return new JWT Token" line="66"/>
+    </inline>
+  </method>
+  <method name="session" start="76" end="97" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Session"/>
+    </docblock>
+    <return type="array" nullable="true"/>
+    <inline>
+      <comment value="remember me" line="84"/>
+    </inline>
+  </method>
+  <method name="register" start="104" end="139" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Login Action"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="true"/>
+    <inline>
+      <comment value="save user" line="125"/>
+      <comment value="return new JWT Token" line="135"/>
+    </inline>
+  </method>
+  <method name="forgot" start="146" end="187" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Forgot password action"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="returnSession" start="198" end="205" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Return session token"/>
+      <param type="array" variable="$user"/>
+      <param type="string" variable="$token"/>
+      <param type="string" variable="$type"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="user" byreference="false" type="array"/>
+    <parameter name="token" byreference="false" type="string"/>
+    <parameter name="type" byreference="false" type="{unknown}" default="" constant="self::AUTH_TOKEN_TYPE"/>
+  </method>
+  <method name="generateJWTSessionToken" start="213" end="244" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Create New JWT Session Token"/>
+      <param type="object" variable="$user">
+        <type full="Mapi\Models\User" namespace="Mapi\Models" name="User"/>
+      </param>
+      <return type="string"/>
+    </docblock>
+    <return type="object" nullable="true">
+      <type full="Lcobucci\JWT\Token" namespace="Lcobucci\JWT" name="Token"/>
+    </return>
+    <parameter name="user" byreference="false" type="object">
+      <type full="Mapi\Models\User" namespace="Mapi\Models" name="User"/>
+    </parameter>
+    <parameter name="expire" byreference="false" type="string" default="&quot;+24 hours&quot;"/>
+    <parameter name="claims" byreference="false" type="array" default=""/>
+    <parameter name="headers" byreference="false" type="array" default=""/>
+  </method>
+  <parent full="Mapi\Core\Controller" namespace="Mapi\Core" name="Controller">
+    <extends full="Phalcon\Mvc\Controller" namespace="Phalcon\Mvc" name="Controller" unresolved="true"/>
+    <implements full="Mapi\Interfaces\ISharedConst" namespace="Mapi\Interfaces" name="ISharedConst"/>
+    <method name="index" start="28" end="38" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Index : Get List of Routes"/>
+        <return type="array"/>
+      </docblock>
+      <return type="array" nullable="false"/>
+    </method>
+    <method name="getRoutes" start="46" end="64" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Get List of Routes"/>
+        <param type="object" variable="$app">
+          <type full="Mapi\Core\Micro" namespace="Mapi\Core" name="Micro"/>
+        </param>
+        <return type="object">
+          <type full="Mapi\Core\array|null" namespace="Mapi\Core" name="array|null"/>
+        </return>
+      </docblock>
+      <return type="array" nullable="true"/>
+      <parameter name="controller" byreference="false" type="object">
+        <type full="Mapi\Core\Controller" namespace="Mapi\Core" name="Controller"/>
+      </parameter>
+    </method>
+    <method name="filterData" start="74" end="85" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Filter Data &amp; return allowed fields data"/>
+        <param type="array" variable="$dataArray"/>
+        <param type="array" variable="$excludes"/>
+        <param type="array" variable="$includes"/>
+        <return type="object">
+          <type full="Mapi\Core\array|null" namespace="Mapi\Core" name="array|null"/>
+        </return>
+      </docblock>
+      <return type="array" nullable="true"/>
+      <parameter name="dataArray" byreference="false" type="array"/>
+      <parameter name="excludes" byreference="false" type="array" default=""/>
+      <parameter name="includes" byreference="false" type="array" default=""/>
+    </method>
+    <method name="sanitizeData" start="93" end="99" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Sanitize Data"/>
+        <param type="array" variable="$data"/>
+        <return type="array"/>
+      </docblock>
+      <return type="array" nullable="false"/>
+      <parameter name="data" byreference="false" type="array"/>
+    </method>
+  </parent>
+  <interface full="Mapi\Interfaces\ISharedConst" namespace="Mapi\Interfaces" name="ISharedConst">
+    <constant type="{unknown}" name="ACTIVE" value="1"/>
+    <constant type="{unknown}" name="INACTIVE" value="1"/>
+  </interface>
+</class>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Models\User" namespace="Mapi\Models" name="User" abstract="false" final="false" start="8" end="138">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Models" file="User.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Models/User.php" size="1890" time="2021-07-17T21:40:07+00:00" unixtime="1626558007" sha1="27e4cfc7e6f5e2cb1f706f7b255d19962bd913ae" relative="Models/User.php"/>
+  <extends full="Mapi\Core\Model" namespace="Mapi\Core" name="Model"/>
+  <uses full="Mapi\Traits\TUser" namespace="Mapi\Traits" name="TUser" start="10" end="10"/>
+  <constant type="array" name="BASIC_FIELDS" value="">
+    <docblock>
+      <description compact="Basic Fields"/>
+      <var type="array"/>
+    </docblock>
+  </constant>
+  <member name="id" visibility="public" static="false" line="22">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="firstname" visibility="public" static="false" line="28">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="lastname" visibility="public" static="false" line="34">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="username" visibility="public" static="false" line="40">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="email" visibility="public" static="false" line="46">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="password" visibility="public" static="false" line="52">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="status" visibility="public" static="false" line="58">
+    <docblock>
+      <description/>
+      <var type="integer"/>
+    </docblock>
+  </member>
+  <member name="avatar" visibility="public" static="false" line="64">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="phone" visibility="public" static="false" line="70">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="created_at" visibility="public" static="false" line="76">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="updated_at" visibility="public" static="false" line="82">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="created_ip" visibility="public" static="false" line="88">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="updated_ip" visibility="public" static="false" line="94">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="excludePassword" default="true" type="boolean" visibility="public" static="false" line="101">
+    <docblock>
+      <description compact="Exclude password value"/>
+      <var type="boolean"/>
+    </docblock>
+  </member>
+  <method name="initialize" start="106" end="110" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Initialize method for model."/>
+    </docblock>
+  </method>
+  <method name="toArray" start="118" end="126" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="To Array method"/>
+      <param type="boolean" variable="$excludePassword"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="columns" byreference="false" type="{unknown}" default="NULL"/>
+  </method>
+  <method name="getProfile" start="134" end="137" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get User Profile"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <parent full="Mapi\Core\Model" namespace="Mapi\Core" name="Model">
+    <extends full="Phalcon\Mvc\Model" namespace="Phalcon\Mvc" name="Model" unresolved="true"/>
+    <implements full="Mapi\Interfaces\ISharedConst" namespace="Mapi\Interfaces" name="ISharedConst"/>
+    <constant type="{unknown}" name="ID_GENERATE" value="true">
+      <docblock>
+        <description compact="Generate auto ID"/>
+        <var type="object">
+          <type full="Mapi\Core\bool" namespace="Mapi\Core" name="bool"/>
+        </var>
+      </docblock>
+    </constant>
+    <constant type="{unknown}" name="BASIC_FIELDS" value="">
+      <docblock>
+        <description compact="Basic fields to getData"/>
+        <var type="array"/>
+      </docblock>
+    </constant>
+    <constant type="{unknown}" name="ID_VALIDATOR" value="true">
+      <docblock>
+        <var type="object">
+          <type full="Mapi\Core\bool" namespace="Mapi\Core" name="bool"/>
+        </var>
+      </docblock>
+    </constant>
+    <member name="client_ip" default="NULL" visibility="protected" static="false" line="40">
+      <docblock>
+        <description compact="Client IP"/>
+        <var type="string"/>
+      </docblock>
+    </member>
+    <method name="find" start="49" end="52" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Allows to query a set of records that match the specified conditions"/>
+        <param type="mixed" variable="$parameters"/>
+        <return type="array" of="object">
+          <type full="Mapi\Core\Model[]|Model|\Phalcon\Mvc\Model\ResultSetInterfa" namespace="Mapi\Core\Model[]|Model|\Phalcon\Mvc\Model" name="ResultSetInterfa"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="false">
+        <type full="Phalcon\Mvc\Model\ResultsetInterface" namespace="Phalcon\Mvc\Model" name="ResultsetInterface"/>
+      </return>
+      <parameter name="parameters" byreference="false" type="{unknown}" default="NULL"/>
+    </method>
+    <method name="findFirst" start="60" end="63" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Allows to query the first record that match the specified conditions"/>
+        <param type="mixed" variable="$parameters"/>
+        <return type="object">
+          <type full="Mapi\Core\Model|\Phalcon\Mvc\Model\ResultInterface|ModelInterface|null" namespace="Mapi\Core\Model|\Phalcon\Mvc\Model" name="ResultInterface|ModelInterface|null"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="true">
+        <type full="Phalcon\Mvc\ModelInterface" namespace="Phalcon\Mvc" name="ModelInterface"/>
+      </return>
+      <parameter name="parameters" byreference="false" type="{unknown}" default="NULL"/>
+    </method>
+    <method name="findFirstById" start="71" end="78" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Find First By Id : Validate UUID"/>
+        <param type="string" variable="$id"/>
+        <return type="object">
+          <type full="\Phalcon\Mvc\ModelInterface|null" namespace="\Phalcon\Mvc" name="ModelInterface|null"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="true">
+        <type full="Phalcon\Mvc\ModelInterface" namespace="Phalcon\Mvc" name="ModelInterface"/>
+      </return>
+      <parameter name="id" byreference="false" nullable="true" type="string"/>
+    </method>
+    <method name="setDefaultSchema" start="85" end="88" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Set Default Schema Name"/>
+        <return type="object">
+          <type full="Mapi\Core\void" namespace="Mapi\Core" name="void"/>
+        </return>
+      </docblock>
+      <return type="void" nullable="false"/>
+    </method>
+    <method name="beforeCreate" start="95" end="113" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Before Create , Save microtime into database"/>
+        <return type="object">
+          <type full="Mapi\Core\void" namespace="Mapi\Core" name="void"/>
+        </return>
+      </docblock>
+      <return type="void" nullable="false"/>
+      <inline>
+        <comment value="Generate new UUID" line="97"/>
+        <comment value="Fill Meta Time" line="102"/>
+      </inline>
+    </method>
+    <method name="beforeUpdate" start="120" end="130" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Before update , Save microtime into database r"/>
+        <return type="object">
+          <type full="Mapi\Core\void" namespace="Mapi\Core" name="void"/>
+        </return>
+      </docblock>
+      <return type="void" nullable="false"/>
+    </method>
+    <method name="beforeDelete" start="137" end="147" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Before Delete , Save microtime into database"/>
+        <return type="object">
+          <type full="Mapi\Core\void" namespace="Mapi\Core" name="void"/>
+        </return>
+      </docblock>
+      <return type="void" nullable="false"/>
+    </method>
+    <method name="setIp" start="155" end="159" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Set Client Ip"/>
+        <param type="object" variable="$clientIp">
+          <type full="Mapi\Core\String" namespace="Mapi\Core" name="String"/>
+        </param>
+        <return resolution="self" type="object">
+          <type full="Mapi\Core\Model" namespace="Mapi\Core" name="Model"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="false">
+        <type full="Mapi\Core\Model" namespace="Mapi\Core" name="Model"/>
+      </return>
+      <parameter name="clientIp" byreference="false" type="string"/>
+    </method>
+    <method name="getIp" start="166" end="169" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get Client Ip"/>
+        <return type="string"/>
+      </docblock>
+      <return type="string" nullable="false"/>
+    </method>
+    <method name="getTime" start="178" end="187" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Get Current Timestamp">*Example $addTime : 'P7Y5M4D' +7Years + 5 Months + 4 Days</description>
+        <param description="Add time to current datetime" type="object" variable="$addTime">
+          <type full="Mapi\Core\string|null" namespace="Mapi\Core" name="string|null"/>
+        </param>
+        <return type="object">
+          <type full="Mapi\Core\string|null" namespace="Mapi\Core" name="string|null"/>
+        </return>
+      </docblock>
+      <return type="string" nullable="true"/>
+      <parameter name="addTime" byreference="false" type="string" default="NULL"/>
+    </method>
+    <method name="validUUID" start="195" end="199" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Validate an UUID"/>
+        <param type="string" variable="$uuid"/>
+        <return type="boolean"/>
+      </docblock>
+      <return type="bool" nullable="false"/>
+      <parameter name="uuid" byreference="false" type="string"/>
+    </method>
+    <method name="setActive" start="207" end="211" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Set Model Status"/>
+        <param type="boolean" variable="$active"/>
+        <return resolution="self" type="object">
+          <type full="Mapi\Core\Model" namespace="Mapi\Core" name="Model"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="false">
+        <type full="Mapi\Core\Model" namespace="Mapi\Core" name="Model"/>
+      </return>
+      <parameter name="active" byreference="false" type="bool"/>
+    </method>
+    <method name="generateUUID" start="218" end="227" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Generate New UUID"/>
+        <return resolution="self" type="object">
+          <type full="Mapi\Core\Model" namespace="Mapi\Core" name="Model"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="false">
+        <type full="Mapi\Core\Model" namespace="Mapi\Core" name="Model"/>
+      </return>
+    </method>
+    <method name="getData" start="235" end="252" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get Basic Data"/>
+        <param description="include more fields" type="array" variable="$fields"/>
+        <return type="array"/>
+      </docblock>
+      <return type="array" nullable="false"/>
+      <parameter name="fields" byreference="false" type="array" default=""/>
+    </method>
+  </parent>
+  <interface full="Mapi\Interfaces\ISharedConst" namespace="Mapi\Interfaces" name="ISharedConst">
+    <constant type="{unknown}" name="ACTIVE" value="1"/>
+    <constant type="{unknown}" name="INACTIVE" value="1"/>
+  </interface>
+  <trait full="Mapi\Traits\TUser" namespace="Mapi\Traits" name="TUser">
+    <method name="validation" start="19" end="41" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Validations and business logic"/>
+        <return type="boolean"/>
+      </docblock>
+    </method>
+    <method name="beforeCreate" start="47" end="52" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="before Create"/>
+      </docblock>
+      <return type="void" nullable="false"/>
+    </method>
+    <method name="beforeUpdate" start="57" end="64" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Before Save"/>
+      </docblock>
+      <return type="void" nullable="false"/>
+    </method>
+    <method name="validatePassword" start="71" end="77" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Validate Password"/>
+      </docblock>
+      <return type="bool" nullable="false"/>
+      <parameter name="password" byreference="false" type="string"/>
+    </method>
+    <method name="hashPassword" start="83" end="88" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description compact="Hash Password"/>
+      </docblock>
+      <return type="string" nullable="false"/>
+      <parameter name="password" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getSessionToken" start="95" end="98" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Get the value of sessionToken"/>
+        <return type="object">
+          <type full="Mapi\Traits\Token|null" namespace="Mapi\Traits" name="Token|null"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="true">
+        <type full="Lcobucci\JWT\Token" namespace="Lcobucci\JWT" name="Token"/>
+      </return>
+    </method>
+    <method name="setSessionToken" start="107" end="112" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Set the value of sessionToken"/>
+        <param type="object" variable="$sessionToken">
+          <type full="Lcobucci\JWT\Token" namespace="Lcobucci\JWT" name="Token"/>
+        </param>
+        <return resolution="self" type="object">
+          <type full="Mapi\Traits\TUser" namespace="Mapi\Traits" name="TUser"/>
+        </return>
+      </docblock>
+      <return type="object" nullable="true">
+        <type full="Mapi\Traits\TUser" namespace="Mapi\Traits" name="TUser"/>
+      </return>
+      <parameter name="sessionToken" byreference="false" type="object">
+        <type full="Lcobucci\JWT\Token" namespace="Lcobucci\JWT" name="Token"/>
+      </parameter>
+    </method>
+  </trait>
+</class>

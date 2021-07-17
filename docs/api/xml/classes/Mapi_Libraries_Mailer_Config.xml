@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Libraries\Mailer\Config" namespace="Mapi\Libraries\Mailer" name="Config" abstract="false" final="false" start="7" end="107">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Libraries/Http/Mailer" file="Config.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Libraries/Http/Mailer/Config.php" size="1741" time="2021-07-17T16:39:19+00:00" unixtime="1626539959" sha1="5d97b82695f2e4a512e1598b6e9685e0cf4d124a" relative="Libraries/Http/Mailer/Config.php"/>
+  <member name="views" visibility="public" static="false" line="15">
+    <docblock>
+      <description compact="Mailer Views directory"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="driver" visibility="public" static="false" line="22">
+    <docblock>
+      <description compact="Mailer Driver"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="port" visibility="public" static="false" line="29">
+    <docblock>
+      <description compact="Mailer Port"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="host" visibility="public" static="false" line="36">
+    <docblock>
+      <description compact="Mailer Host"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="encryption" visibility="public" static="false" line="43">
+    <docblock>
+      <description compact="Encryption"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="username" visibility="public" static="false" line="50">
+    <docblock>
+      <description compact="Mailer Username"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="password" visibility="public" static="false" line="57">
+    <docblock>
+      <description compact="Mailer Password"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="from" visibility="public" static="false" line="64">
+    <docblock>
+      <description compact="Mailer From Name"/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="71" end="82" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Init Configs"/>
+      <param type="array" variable="$configs"/>
+    </docblock>
+    <parameter name="configs" byreference="false" type="array"/>
+  </constructor>
+  <method name="toArray" start="89" end="98" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get Configs to Array"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="initFrom" start="100" end="106" abstract="false" final="false" static="false" visibility="private">
+    <return type="void" nullable="false"/>
+    <parameter name="from" byreference="false" type="array"/>
+  </method>
+</class>

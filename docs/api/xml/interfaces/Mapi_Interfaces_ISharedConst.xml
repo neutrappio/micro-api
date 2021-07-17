@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Mapi\Interfaces\ISharedConst" namespace="Mapi\Interfaces" name="ISharedConst" abstract="false" final="false" start="6" end="10">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Interfaces" file="ISharedConst.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Interfaces/ISharedConst.php" size="133" time="2021-07-17T18:18:08+00:00" unixtime="1626545888" sha1="682d76242b6c326e8ddbb5d18895353f69a55d52" relative="Interfaces/ISharedConst.php"/>
+  <constant type="{unknown}" name="ACTIVE" value="1"/>
+  <constant type="{unknown}" name="INACTIVE" value="1"/>
+  <implementors>
+    <class full="Mapi\Controllers\User\ProfileController" namespace="Mapi\Controllers\User" name="ProfileController"/>
+    <class full="Mapi\Controllers\Auth\LoggedController" namespace="Mapi\Controllers\Auth" name="LoggedController"/>
+    <class full="Mapi\Controllers\Auth\AuthController" namespace="Mapi\Controllers\Auth" name="AuthController"/>
+    <class full="Mapi\Controllers\IndexController" namespace="Mapi\Controllers" name="IndexController"/>
+    <class full="Mapi\Core\Controller" namespace="Mapi\Core" name="Controller"/>
+    <class full="Mapi\Core\Model" namespace="Mapi\Core" name="Model"/>
+    <class full="Mapi\Models\User" namespace="Mapi\Models" name="User"/>
+  </implementors>
+</interface>

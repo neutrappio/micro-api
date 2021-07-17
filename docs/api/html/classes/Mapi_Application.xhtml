@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Mapi\Application</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Mapi">Mapi</a>
+          </li>
+          <li class="separator">Application</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Application.php.xhtml#line11">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Mapi\</small>Application</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Application
+                implements
+                <a title="Mapi\Interfaces\IApplication" href="../interfaces/Mapi_Interfaces_IApplication.xhtml">IApplication</a>
+            {<br/><ul class="none"><li>// members</li><li>private <span title="Phalcon\Mvc\Micro">Micro</span> <a href="#members">$app</a>;
+                    </li><li>private <span title="Mapi\Api">Api</span> <a href="#members">$api</a>;
+                    </li><li>private <span title="Phalcon\Di\DiInterface">DiInterface</span> <a href="#members">$DiFactory</a>;
+                    </li><li>private array <a href="#members">$services</a> =
+                        ;
+                    </li><li>private array <a href="#members">$handlers</a> =
+                        ;
+                    </li><li>private array <a href="#members">$middlewares</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Mapi\Application" href="../classes/Mapi_Application/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="Mapi\Application" href="../classes/Mapi_Application/getBasePath.xhtml">getBasePath</a>()
+                    </li><li>public string <a title="Mapi\Application" href="../classes/Mapi_Application/getAppPath.xhtml">getAppPath</a>()
+                    </li><li>public <span title="DiInterface">DiInterface</span> <a title="Mapi\Application" href="../classes/Mapi_Application/getDiFactory.xhtml">getDiFactory</a>()
+                    </li><li>public void <a title="Mapi\Application" href="../classes/Mapi_Application/loadServices.xhtml">loadServices</a>()
+                    </li><li>private void <a title="Mapi\Application" href="../classes/Mapi_Application/initApp.xhtml">initApp</a>()
+                    </li><li>public Application <a title="Mapi\Application" href="../classes/Mapi_Application/setServices.xhtml">setServices</a>()
+                    </li><li>public Application <a title="Mapi\Application" href="../classes/Mapi_Application/setHandlers.xhtml">setHandlers</a>()
+                    </li><li>public Application <a title="Mapi\Application" href="../classes/Mapi_Application/setMiddlewares.xhtml">setMiddlewares</a>()
+                    </li><li>public void <a title="Mapi\Application" href="../classes/Mapi_Application/run.xhtml">run</a>()
+                    </li><li>public <span title="Micro">Micro</span> <a title="Mapi\Application" href="../classes/Mapi_Application/getApp.xhtml">getApp</a>()
+                    </li><li>public array <a title="Mapi\Application" href="../classes/Mapi_Application/getMiddlewares.xhtml">getMiddlewares</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Mapi\Interfaces\IApplication" href="../interfaces/Mapi_Interfaces_IApplication.xhtml">Mapi\Interfaces\IApplication</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="DiFactory"><strong>$DiFactory</strong>
+                —
+                <a title="Phalcon\Di\DiInterface" href="../classes/Phalcon_Di_DiInterface.xhtml">Phalcon\Di\DiInterface</a><br/><span class="indent">Di Facotry</span></li>
+            <li id="api"><strong>$api</strong>
+                —
+                <a title="Mapi\Api" href="../classes/Mapi_Api.xhtml">Mapi\Api</a><br/><span class="indent">Api App</span></li>
+            <li id="app"><strong>$app</strong>
+                —
+                <a title="Phalcon\Mvc\Micro" href="../classes/Phalcon_Mvc_Micro.xhtml">Phalcon\Mvc\Micro</a><br/><span class="indent">Micro App</span></li>
+            <li id="handlers"><strong>$handlers</strong>
+                —
+                array<br/><span class="indent">Handlers list</span></li>
+            <li id="middlewares"><strong>$middlewares</strong>
+                —
+                array<br/><span class="indent">middlewares list</span></li>
+            <li id="services"><strong>$services</strong>
+                —
+                array<br/><span class="indent">Services list</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="initApp"><a title="Mapi\Application" href="../classes/Mapi_Application/initApp.xhtml">initApp()</a>
+                — Init Application</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Mapi\Application" href="../classes/Mapi_Application/__construct.xhtml">__construct()</a>
+                — App Constructor</li>
+            <li id="getApp"><a title="Mapi\Application" href="../classes/Mapi_Application/getApp.xhtml">getApp()</a>
+                — Get micro App</li>
+            <li id="getAppPath"><a title="Mapi\Application" href="../classes/Mapi_Application/getAppPath.xhtml">getAppPath()</a>
+                — Get Application Path</li>
+            <li id="getBasePath"><a title="Mapi\Application" href="../classes/Mapi_Application/getBasePath.xhtml">getBasePath()</a>
+                — Get Project Base Path</li>
+            <li id="getDiFactory"><a title="Mapi\Application" href="../classes/Mapi_Application/getDiFactory.xhtml">getDiFactory()</a>
+                — Get di Facotry</li>
+            <li id="getMiddlewares"><a title="Mapi\Application" href="../classes/Mapi_Application/getMiddlewares.xhtml">getMiddlewares()</a>
+                — Get middlewares list</li>
+            <li id="loadServices"><a title="Mapi\Application" href="../classes/Mapi_Application/loadServices.xhtml">loadServices()</a>
+                — Load Services</li>
+            <li id="run"><a title="Mapi\Application" href="../classes/Mapi_Application/run.xhtml">run()</a>
+                — Run App</li>
+            <li id="setHandlers"><a title="Mapi\Application" href="../classes/Mapi_Application/setHandlers.xhtml">setHandlers()</a>
+                — Set handlers list</li>
+            <li id="setMiddlewares"><a title="Mapi\Application" href="../classes/Mapi_Application/setMiddlewares.xhtml">setMiddlewares()</a>
+                — Set middlewares list</li>
+            <li id="setServices"><a title="Mapi\Application" href="../classes/Mapi_Application/setServices.xhtml">setServices()</a>
+                — Set the value of services</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

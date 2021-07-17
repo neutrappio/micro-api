@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Mapi\Handlers\Router" namespace="Mapi\Handlers" name="Router" abstract="false" final="false" start="11" end="21">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Handlers" file="Router.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Handlers/Router.php" size="476" time="2021-07-14T15:44:22+00:00" unixtime="1626277462" sha1="9a69f4768d7535051ca0cee55f0fc403433ae769" relative="Handlers/Router.php"/>
+  <implements full="Mapi\Interfaces\IHandler" namespace="Mapi\Interfaces" name="IHandler"/>
+  <method name="register" start="13" end="20" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="application" byreference="false" type="object">
+      <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+    </parameter>
+  </method>
+  <interface full="Mapi\Interfaces\IHandler" namespace="Mapi\Interfaces" name="IHandler">
+    <method name="register" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <return type="void" nullable="false"/>
+      <parameter name="application" byreference="false" type="object">
+        <type full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication"/>
+      </parameter>
+    </method>
+  </interface>
+</class>

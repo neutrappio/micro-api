@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Mapi\Interfaces\IApplication" namespace="Mapi\Interfaces" name="IApplication" abstract="false" final="false" start="8" end="45">
+  <file path="/home/yassine/neutrapp/github/micro-api/app/Interfaces" file="IApplication.php" realpath="/home/yassine/neutrapp/github/micro-api/app/Interfaces/IApplication.php" size="699" time="2021-07-17T17:00:48+00:00" unixtime="1626541248" sha1="97529676c22fbd66da7e24f5ef4d5f3b181b3f6f" relative="Interfaces/IApplication.php"/>
+  <method name="getDiFactory" start="15" end="15" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get Di Factory"/>
+      <return type="object">
+        <type full="Phalcon\Di\DiInterface" namespace="Phalcon\Di" name="DiInterface"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Phalcon\Di\DiInterface" namespace="Phalcon\Di" name="DiInterface"/>
+    </return>
+  </method>
+  <method name="getAppPath" start="22" end="22" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get Application Path"/>
+      <return type="string"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="getBasePath" start="29" end="29" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get Project Base Path"/>
+      <return type="string"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="getApp" start="37" end="37" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get Application"/>
+      <return type="object">
+        <type full="Phalcon\Mvc\Micro" namespace="Phalcon\Mvc" name="Micro"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Phalcon\Mvc\Micro" namespace="Phalcon\Mvc" name="Micro"/>
+    </return>
+  </method>
+  <method name="getMiddlewares" start="44" end="44" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get middlewares list"/>
+      <return type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <implementors>
+    <class full="Mapi\Application" namespace="Mapi" name="Application"/>
+  </implementors>
+</interface>
