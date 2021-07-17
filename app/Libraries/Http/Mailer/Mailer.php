@@ -95,7 +95,7 @@ class Mailer
      */
     public function generateView(string $viewFile, array $values) : string
     {
-        $values['app.name'] = $_ENV["APP_NAME"] ?? "DMApp";
+        $values['app.name'] = getenv("APP_NAME") ?? "Mapi";
 
         $keyValues = [];
         foreach ($values as $key => $value) {
