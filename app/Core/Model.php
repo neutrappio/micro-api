@@ -71,7 +71,7 @@ abstract class Model extends PModel implements ISharedConst
     public static function findFirstById(?string $id) : ?ModelInterface
     {
         if (is_null($id) || true === get_called_class()::ID_VALIDATOR && false === self::validUUID($id)) {
-            throw new PublicException("invalid id", HttpCodes::HTTP_BAD_REQUEST);
+            throw new PublicException("INVALID_ID", HttpCodes::HTTP_BAD_REQUEST);
         }
         
         return parent::findFirstById($id);

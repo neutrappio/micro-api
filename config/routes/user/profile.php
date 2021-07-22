@@ -9,7 +9,7 @@ $collection->setHandler(ProfileController::class, true);
 
 $collection->setPrefix('/users');
 
-$collection->get('/me', 'index');
+$collection->get('/me', 'me');
 $collection->get('/all', 'all');
 
 return $collection;

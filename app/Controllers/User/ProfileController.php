@@ -6,24 +6,24 @@ namespace Mapi\Controllers\User;
 use Mapi\Models\User;
 use Mapi\Controllers\Auth\LoggedController;
 use Mapi\Traits\TPagination;
+use Mapi\Traits\TResponse;
 
 /**
  *  Landing Index Controller
  */
 class ProfileController extends LoggedController
 {
+    use TResponse;
     use TPagination;
 
     /**
-     * Index Action
+     * Self Profile
      *
      * @return array
      */
-    public function index() : array
+    public function me() : array
     {
-        return [
-            'user'=> $this->getUser()
-        ];
+        return $this->getAsItem($this->getUser());
     }
     
     /**

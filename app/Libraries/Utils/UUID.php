@@ -1,6 +1,6 @@
 <?php
 
-namespace Mapi\Utils;
+namespace Mapi\Libraries\Utils;
 
 trait UUID
 {
