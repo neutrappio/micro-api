@@ -110,4 +110,20 @@ trait TUser
 
         return $this;
     }
+
+    /**
+     * To Array method
+     *
+     * @param boolean $excludePassword
+     * @return array
+     */
+    public function toArray($columns = null): array
+    {
+        $data = parent::toArray();
+
+        if ($this->excludePassword) {
+            unset($data['password']);
+        }
+        return $data;
+    }
 }

@@ -7,8 +7,9 @@ use Mapi\Controllers\User\ProfileController;
 $collection = new Collection();
 $collection->setHandler(ProfileController::class, true);
 
-$collection->setPrefix('/user/profile');
+$collection->setPrefix('/users');
 
-$collection->get('/', 'index');
+$collection->get('/me', 'index');
+$collection->get('/all', 'all');
 
 return $collection;
